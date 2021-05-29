@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="environment" value="{{ hugo.Environment }}">
+    {{ partial "tnd-seo/tags" . }}
     {{ partial "tnd-styles/tags" . }}
     {{ if .IsTranslated }}
       {{ range .Translations }}
@@ -15,7 +16,6 @@
     <link rel="shortcut icon" type="image/png" href="{{ site.BaseURL }}/favicon.png"/>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
-    {{ partial "og.html" . }}
     <script>
     	var rpEnv = {{ .Site.Params.env }};
         var BaseURL = {{ .Site.BaseURL }};

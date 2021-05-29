@@ -1,0 +1,8 @@
+includeNewer: true
+indices:
+  - name: tags
+    weight: 100
+    toLower: true
+  - name: date
+    weight: 10
+    pattern: 2006

@@ -1,0 +1,14 @@
+{{- if and (eq .Params.layout "contact") (ne .Lang "ja") -}}
+  {{- .Scratch.Set "script" (slice (resources.Get "js/contact.js") (resources.Get "js/main.js") | resources.Concat "js/bundle.contact.js") -}}
+{{ else }}
+{{- .Scratch.Set "script" (resources.Get "js/main.js") -}}
+{{- end -}}
+{{- .Scratch.Set "modernizr" (resources.Get "js/modernizr.js") -}}
+{{ if .Site.IsServer }}
+    {{ .Scratch.Set "style" (resources.Get "sass/main.scss" | toCSS "style/main.css" ) -}}
+{{- else -}}
+	{{ .Scratch.Set "style" (resources.Get "sass/main.scss" | toCSS "style/main.css" | minify | fingerprint ) }}
+	{{ .Scratch.Set "script" (.Scratch.Get "script" | minify | fingerprint) }}
+	{{ .Scratch.Set "modernizr" (.Scratch.Get "modernizr" | fingerprint) }}
+{{- end -}}
+{{ .Scratch.Set "critical" (resources.Get "sass/critical.scss" | toCSS | minify) }}

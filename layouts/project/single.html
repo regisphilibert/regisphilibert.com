@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ $template := "single"}}
+<div class="rp-project-loop">
+	{{ $params := dict "template" $template "dot" . }}
+	{{ partial "project/loop.html" $params }}
+</div>
+{{ end }}

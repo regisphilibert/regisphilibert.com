@@ -1,0 +1,9 @@
+{{- $site := .site -}}
+{{- $s := newScratch -}}
+{{- with resources.Get .asset -}}
+	{{- if $site.IsServer -}}
+		{{- .Permalink -}}
+	{{- else }}
+		{{- (. | fingerprint).Permalink -}}
+	{{- end -}}
+{{- end -}}

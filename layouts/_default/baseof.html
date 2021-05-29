@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ .Lang }}"> <!--<![endif]-->
+	{{- partial "scratch/body_classes" . -}}
+	{{ $pageType := cond (eq .Layout "contact") "contact" "default" }}
+    {{- range .Translations -}}
+    	{{ $.Scratch.Set "translation_url" .Permalink }}
+    {{- end -}}
+	{{- partial "head.html" . -}}
+	{{ if eq .Layout "about" }}
+		{{ partialCached "svg" . }}
+	{{ end }}
+	<body class="{{ delimit ($.Scratch.Get "classes") " " }}">
+
+		<div class="rp-wrapper">
+			{{ partial "header.html" . }}
+			<div class="rp-main">
+				<div class="rp-container">
+					{{ block "main" . }}
+						<h3>Did you forget to define "main"?</h3>
+					{{ end }}
+	                {{- partialCached "footer.html" . $pageType -}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

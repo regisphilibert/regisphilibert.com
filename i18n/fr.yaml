@@ -1,0 +1,52 @@
+- id: dev_title
+  translation: "Développeur Front End"
+
+- id: contact_email
+  translation: "Courriel"
+
+- id: contact_email_error
+  translation: "Ce n'est pas un courriel valide."
+
+- id: contact_message
+  translation: "Message"
+
+- id: contact_message_error
+  translation: "C'est tout ? :/"
+
+- id: contact_submit
+  translation: "Contactez-moi"
+
+- id: contact_sending
+  translation: "Envoie..."
+
+- id: contact_thanks
+  translation: "Merci !"
+
+- id: contact_you_wrote
+  translation: "Vous avez écrit..."
+
+- id: from
+  translation: "De"
+
+- id: know_more
+  translation: "en savoir plus"
+
+- id: play_logos
+  translation: "On devine les logos?"
+
+- id: no_play_logos
+  translation: "Nan, on devine pas les logos."
+
+- id: skill_grid_title
+  translation: "Et maintenant... la grille des skills!"
+
+- id: to_top
+  translation: "au top!"
+
+- id: minutes_read
+  translation: 
+    one: "minute de lecture"
+    other: "minutes de lecture"
+
+- id: recent_posts
+  translation: "Articles récents"

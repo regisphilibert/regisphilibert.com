@@ -1,0 +1,52 @@
+- id: dev_title
+  translation: "Front End Developer"
+
+- id: contact_email
+  translation: "Email"
+
+- id: contact_email_error
+  translation: "This is not a valid email"
+
+- id: contact_message
+  translation: "Message"
+
+- id: contact_message_error
+  translation: "Just like that? :/"
+
+- id: contact_submit
+  translation: "Reach me"
+
+- id: contact_sending
+  translation: "Sending..."
+
+- id: contact_thanks
+  translation: "Thanks!"
+
+- id: contact_you_wrote
+  translation: "Here's what you wrote..."
+
+- id: from
+  translation: "From"
+
+- id: know_more
+  translation: "show me more"
+
+- id: play_logos
+  translation: "Play guess the logos!"
+
+- id: no_play_logos
+  translation: "Don't play guess the logos"
+
+- id: skill_grid_title
+  translation: "And now... the skill grid!"
+
+- id: to_top
+  translation: "to the top"
+
+- id: minutes_read
+  translation: 
+    one: "minute read"
+    other: "minutes read"
+
+- id: recent_posts
+  translation: "Recent Posts"

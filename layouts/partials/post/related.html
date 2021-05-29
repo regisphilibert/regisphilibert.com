@@ -1,0 +1,10 @@
+<div class="rp-Entry__section">
+	<div class="wysiwyg-content">
+		<h2>Related posts</h2>
+	</div>
+	<div class="rp-Cards">
+		{{ range . }}
+		{{ partial "card" . }}
+		{{ end }}
+	</div>
+</div>

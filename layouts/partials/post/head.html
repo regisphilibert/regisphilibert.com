@@ -1,0 +1,35 @@
+<div class="rp-Entry__head">
+	<h1 class="rp-Entry__title">
+		{{ if .Scratch.Get "link_in_title" }}
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+		{{ else }}
+		{{ .Title }}
+		{{ end}}
+	</h1>
+	{{ with .Params.subtitle }}
+	<h2 class="rp-Entry__subtitle">{{ . }}</h2>
+	{{ end }}
+	<div class="rp-Entry__meta">
+		<div class="rp-Entry__time">
+			{{ if ne .Type  "note"}}
+				<time datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time> 
+			{{ end }}
+			{{ if ne .Lastmod .Date }}
+			<div class="rp-Entry__time__small">
+				{{ $format := cond (eq (.Date.Format "2006") (.Lastmod.Format "2006") ) "January 2" "January 2, 2006" }}
+				<time datetime="{{ .Lastmod }}">Last modified on {{ .Lastmod.Format $format }}</time>
+			</div>
+			{{ end }}
+		</div>
+		{{ with .ReadingTime }}
+			{{ if eq $.Section "note" }}
+				<small>{{ . }} {{ i18n "minutes_read" . }}.</small>
+			{{ end }}
+		{{ end }}
+		<div class="rp-Entry__tags">
+    		{{ range .Params.tags }}
+				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class='rp-Tag'>{{ . }}</a>
+			{{ end }}
+		</div>
+	</div>
+</div>

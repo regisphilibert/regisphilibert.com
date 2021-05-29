@@ -1,0 +1,11 @@
+{{ if ne .Layout "contact" }}
+<footer class="rp-footer">
+    <div class="rp-footer-wrapper">
+        <div class="rp-btt back_top_top" data-content="{{ i18n "to_top" }}"></div>
+        <div class="footer-text">
+            {{ now.Format "2006" }}&copy; Régis Philibert
+        </div>
+    </div>
+</footer>
+
+{{ end }}

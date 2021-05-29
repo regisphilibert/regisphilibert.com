@@ -1,0 +1,129 @@
+.rp-Badges{
+	display:grid;
+	grid-gap:10px;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-auto-rows:120px;
+	counter-reset:badge;
+	grid-auto-flow:dense;
+
+}
+.rp_Badge__icon--svg{
+	width: 1em;
+}
+.rp-Badge{
+	counter-increment:badge;
+	position: relative;
+	background-color:$cYellow;
+	border-radius:5px;
+	.rp-Badge__body{
+		padding:0 1em 1em 1em;
+		overflow: scroll;
+	}
+	.rp-Badge__head{
+		padding:0;
+		display:flex;
+  		align-items: center;
+  		justify-content: center;
+		.rp-Badge__icon{
+			display: block;
+			font-size: 1em;
+		}
+		span.rp-Badge__icon{
+			font-family: $ffCode;
+			letter-spacing: -3px;
+			font-size: 0.5em;
+		}
+		
+	}
+	&:after{
+		display: none;
+		content:attr(data-name);
+		position: absolute;
+		right:1em;
+		top:7px;
+		color:white;
+		font-size: 15px;
+		transition:300ms;
+	}
+	a{
+		text-decoration: underline;
+	}
+	.rp-Badge__back{
+
+	}
+}
+.rp-Badge{
+	position: relative;
+	overflow: hidden;
+	cursor:pointer;
+	.rp-Badge__head{
+		font-size: 100px;
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		transition:300ms;
+		cursor:pointer;
+	}
+	.rp-Badge__body{
+		position: absolute;
+		top:100%;
+		width:100%;
+		transition:300ms;
+	}
+}
+.rp-Badge--large{
+	grid-row: span 2;
+	grid-column: span 2;
+}
+.no-touchevents .rp-Badge:hover, .rp-Badge--open{
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.rp-Badge--open{
+	.rp-Badge__head{
+		height:20%;
+		font-size:1em;
+		padding-left:1em;
+		justify-content: start;
+		span.rp-Badge__icon{
+			letter-spacing: 0;
+			font-size:1em;
+		}
+	}
+	.rp-Badge__body{
+		top:20%;
+		height:80%;
+	}
+	&:after{
+		display:block;
+	}
+}
+.rp-Badges--show-logos{
+	.rp-Badge:after{
+		display: block;
+	}
+}
+@media (min-width:400px){
+	.rp-Badges{
+		grid-template-columns:1fr 1fr 1fr;
+	}
+}
+@media (min-width:750px){
+	.rp-Badges{
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-auto-rows:175px;
+	}
+	.rp-Badge--large{
+		grid-column:span 2;
+		.rp-Badge__head{
+			.rp-Badge__icon{
+				font-size: 2em;
+			}
+		}
+	}
+}
+
+.rp-Badge:not(.rp-Badge--large){
+	font-size:0.7em;
+}

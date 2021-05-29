@@ -1,0 +1,44 @@
+- id: dev_title
+  translation: "Front End Developer"
+
+- id: contact_email
+  translation: "メル"
+
+- id: contact_email_error
+  translation: "不正な値でわありません"
+
+- id: contact_message
+  translation: "メサージ"
+
+- id: contact_message_error
+  translation: "を入力してください"
+
+- id: contact_submit
+  translation: "送信"
+
+- id: contact_sending
+  translation: "送信されています..."
+
+- id: contact_thanks
+  translation: "ありがとう"
+
+- id: contact_you_wrote
+  translation: "あなたのメサージ："
+
+- id: from
+  translation: "From"
+
+- id: know_more
+  translation: "show me more"
+
+- id: play_logos
+  translation: "Play guess the logos!"
+
+- id: no_play_logos
+  translation: "Don't play guess the logos"
+
+- id: skill_grid_title
+  translation: "And now... the skill grid!"
+
+- id: recent_posts
+  translation: "最近の記事"

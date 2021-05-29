@@ -1,0 +1,47 @@
+.rp-Social{
+	display: inline-block;
+	margin: 0 0.2em;
+	font-size:1.2em;
+	a{
+		transition:150ms;
+		&:hover{
+			color:$cYellow;
+		}
+	}
+}
+.rp-section-contact .rp-header .rp-Socials{
+	display: none;
+}
+@media (min-width:$xl){
+	.rp-page-header, .rp-Entry__head{
+		.rp-Social{
+			font-size:2.3em;
+		}
+	}
+	.rp-Social{
+		&:last-child{
+			margin-right:0;
+		}
+	}
+	.rp-header{
+		.rp-Socials{
+			margin-top:1em;
+		}
+	}
+}
+
+@media (max-width:$xl - 1){
+	.rp-header{
+		position: relative;
+		.rp-Socials{
+			position:absolute;
+			right:5px;;
+			top:5px;
+			height:100%;
+			display: flex;
+		}
+		.rp-Social{
+			font-size: 1.1em;
+		}
+	}
+}

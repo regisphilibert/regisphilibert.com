@@ -1,0 +1,15 @@
+{{ if .IsTranslated }}
+    <div class="rp-lang-switch">
+        {{ range .Translations }}
+        <a href="{{ .Permalink }}" data-lang="{{ .Lang }}" title="{{ .Language.LanguageName }}">{{ cond (eq .Lang "ja") .Language.LanguageName .Lang }}</a>
+        {{ end }}</span>
+    </div>
+{{ else }}
+	<div class="rp-lang-switch">
+		{{ range .Sites }}
+			{{ if ne .Language.Lang $.Lang }}
+				<a href="{{ .Home.Permalink }}" data-lang="{{ .Language.Lang }}" title="{{ .Language.LanguageName }}">{{ cond (eq .Language.Lang "ja") .Language.LanguageName .Language }}</a>
+			{{ end }}
+		{{ end }}
+	</div>
+{{ end}}

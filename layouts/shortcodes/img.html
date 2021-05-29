@@ -1,0 +1,20 @@
+{{ $img := $.Page.Resources.GetMatch (.Get "name") }}
+<figure>
+	<picture>
+		{{ range $width, $size := $.Site.Params.imagesizes }}
+			{{ $image := $img.Resize (printf "%sx" $width)  }}
+			<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
+		{{ end }}
+		<img src="{{ $img.RelPermalink }}" {{ with .Get "title" }} alt="{{ . }}"{{ end }} />	
+	</picture>
+	{{ if or (.Get "title") (.Get "caption") }}
+	<figcaption>
+		{{ with .Get "title" }}
+		<h4>{{ . }}</h4>
+		{{ end }}
+		{{ with .Get "caption" }}
+		{{ . }}
+		{{ end }}
+	</figcaption>
+	{{ end }}
+</figure>

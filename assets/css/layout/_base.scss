@@ -1,0 +1,53 @@
+*{
+    box-sizing:border-box;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: $fwRegular;
+    margin: 0;
+}
+a,
+a:active,
+a:hover,
+a:focus {
+  outline: none;
+}
+
+a{
+    color:inherit;
+}
+hr{
+    border-top:1px solid $cTurquoise;
+    max-width:60vw;
+    margin-right:auto;
+    margin-left:auto;
+}
+html{
+    font-size: 18px;
+    line-height: $lh;
+    @media screen and (min-width:$desktop) {
+        font-size:22px;
+    }
+}
+body{
+    position: relative;
+    font-family: $sans;
+    color:$cBlack;
+    background-color:$cBackground;
+}
+.rp-main{
+    padding-top:30px;
+    padding-bottom:30px;
+    .rp-section-post &, .rp-section-tags & {
+        background-color:$cNearWhite;
+    }
+}
+body.rp-section-note{
+    background-color:$cNearWhite;
+}
+
+.rp-container{
+    padding:0 10px;
+    @media screen and (min-width:$xl) {
+        padding:0 30px;
+    }
+}

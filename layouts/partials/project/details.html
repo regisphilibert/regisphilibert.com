@@ -1,0 +1,36 @@
+<div class="rp-Project__content ">
+	<div class="rp-Project__title">
+        {{ if eq .template "single" }}
+        <span>
+            {{ .dot.Title }}
+        </span>
+        {{ else }}
+		<a href="{{ .dot.Permalink }}">
+            {{ .dot.Title }} 
+        </a>
+        {{ end }}
+	</div>
+	<div class="rp-Project__desc">
+		{{ .dot.Content }}
+	</div>
+    <div class="rp-Stats">
+        {{ with .dot.Params.stats }}
+            {{ range $index, $value := . }}
+            {{ $text := printf "%s: %d%%" $index .}}
+                <div class="rp-Progress" data-text="{{ $index }}:{{ . }}%">
+                    <span style="width:{{ . }}%">{{ $text }}</span>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+	<div class="rp-Project__meta">
+        {{ range .dot.Params.project_tags }}
+            <a href="{{ "/project_tags/" | relLangURL }}{{ . | urlize }}" class='rp-Tag'>{{ . }}</a>
+        {{ end }}
+        {{ with.dot.Params.ext_url }}
+        <p>
+            <a class="rp-Project__link" target="_blank" rel="noopener" href="{{ . }}">{{ . }}</a> <i class="fas fa-external-link-alt"></i>
+        </p>
+        {{ end }}
+	</div>
+</div>

@@ -1,0 +1,15 @@
+thanksgiving:
+  emoji: "🦃"
+  url: https://ja.wikipedia.org/wiki/感謝祭
+  title: ビーガン!
+christmas:
+  emoji: "🦌"
+  title: 幸せな休日！
+newyear:
+  emoji: "🎍"
+  title: 明けましておめでとうございます！
+  url: https://ja.wikipedia.org/wiki/門松
+  style: "font-size:2em;"
+vote:
+  emoji: "🗳️"
+  title: https://votesaveamerica.com/

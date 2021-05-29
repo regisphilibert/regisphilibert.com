@@ -1,0 +1,13 @@
+<picture class="rp-project-media-img">
+	{{ $image_type_arr := split .file "." }}
+	{{ $image_ext := index $image_type_arr 1 }}
+	{{ $image_name := index $image_type_arr 0 }}
+	{{ range $width, $size := .content.Site.Params.imagesizes }}
+		{{ $directory := printf "static/%s" ( $.content.Type | pluralize) }}
+		{{ $filename_test := printf "%s--%s.%s" $image_name $size $image_ext }}
+			{{ if (where (readDir $directory) "Name" $filename_test) }}
+				<source srcset='{{ ($.content.Type | pluralize) | absURL  }}/{{ $image_name }}{{ printf "--%s." $size }}{{ $image_ext }}' media='(max-width: {{ $width }}px)' />
+			{{ end }}
+	{{ end }}
+	<img src="{{ ( .content.Type | pluralize) | absURL }}/{{ .file }}" alt="" />
+</picture>

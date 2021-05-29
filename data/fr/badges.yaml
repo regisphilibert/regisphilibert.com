@@ -1,0 +1,77 @@
+- Name: Hugo
+  Icon: hugo
+  Big: true
+  SVG: true
+  Text: Le meilleur générateur de site static 🚀. Je code mes sites web avec, [j'écris dessus](https://regisphilibert.com/tags/hugo/), et je chéris les projets montés avec! Go [Hugo](https://gohugo.io/)!
+
+- Name: JAMStack
+  Big: true
+  Text: |
+    Le [JAMStack](https://jamstack.org/best-practices/), c'est le futur du web.
+    C'est un server sans FTP, c'est du data sans phpMyAdmin, c'est la vie sans cPanel... 
+    
+    C'est là où le web et moi on se rend, mais montez, y a de la place pour tout le monde!
+
+- Icon: wordpress
+  Big: true
+  Name: Wordpress
+  Text: C'est mon CMS de choix. Il a le back office parfait, et avec une bonne API Rest, on a même pas besoin de son front.
+
+- Name: Gatsby
+  Text: Mon second choix pour construire des sites statics. S'intègre parfaitement à un projet React! 
+  Icon: gatsby
+  SVG: true
+
+- Name: Netlify
+  Icon: netlify
+  SVG: true
+  Text: Ils font leur part dans la révolution JAMStack mentionnée plus tôt. Je m'en sers sur presque tous mes projets JAMStack.
+
+
+- Icon: react
+  Name: React
+  Text: Rarement en dehors de Gatsby...
+
+- Icon: graphql
+  SVG: true
+  Name: GraphQL
+  Text: Si j'avais une requête...
+
+- Icon: angular
+  Name: AngularJS
+  Text: Ai pas mal pratiqué AngularJS, et attend un opportunité de travailler sur le nouveau.
+
+- Icon: vuejs
+  Name: Vue.js
+  Text: J'ai fait la plupart des formations disponibles en ligne... J'attends le bon projet pour passer pro.
+
+- Icon: laravel
+  Name: Laravel
+  Text: Mon framework PHP de coeur. J'ai consruit l'API du 375è anniversaire de Montréal avec!
+
+- Icon: git
+  Name: GIT
+  Text: Oui et en ligne de commande svp! ([Profil GitHub ici](https://github.com/regisphilibert))
+
+- Icon: node-js
+  Name: Node.js
+  Text: Généralement à travers des packages! J'utilise Yarn pour gêrer ces derniers parce que... emojis 🤩.
+
+- Icon: grunt
+  Name: Grunt
+  Text: J'utilise Grunt pour les tâches front-end.
+
+- Icon: sass
+  Name: Sass
+  Text: Mon preprocessor de choix!
+
+- Name: "🤡"
+  Text: J'ai peur des clowns. Ben ouais.
+
+- Icon: font-awesome-flag
+  Name: Font Awesome
+  Text: Faut rendre à César son machin. La plupart de ces icônes viennent de [FA5](https://fontawesome.com/).
+
+- Icon: pied-piper
+  Name: Pied Piper
+  Text: Ah ah.

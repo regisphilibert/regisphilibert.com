@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $toc :=  .Params.toc }}
+<div class="rp-Entry{{ if $toc }} rp-Entry--with-sidebar{{ end }}">
+	
+	<article class="rp-Entry__main">
+		{{ partial "post/head.html" . }}
+		<div class="rp-Entry__content wysiwyg-content">
+			{{ .Content }}
+		</div>
+		
+		{{ with (where (.Site.RegularPages.Related .) "Type" "post" | first 4) }}
+		{{ partial "post/related" . }}
+		{{ end }}
+
+		{{ partial "post/comments" . }}
+		
+	</article>
+	
+	{{ if $toc }}
+		<div class="rp-Entry__sidebar">
+		{{ partial "toc.html" . }}
+		</div>
+	{{ end }}
+</div>
+{{ end }}

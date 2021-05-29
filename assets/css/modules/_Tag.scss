@@ -1,0 +1,47 @@
+.rp-Tag{
+    display: inline-block;
+    vertical-align: middle;
+    padding:3px 14px;
+    font-weight: $fwBold;
+    font-size: 0.5em;
+    text-transform: lowercase;
+    color:$cTurquoise;
+    //border-radius:3px;
+    border:1px solid lighten($cTurquoise, 20%);
+    margin-bottom: 6px;
+    &:before{
+        content:"#"
+    }
+    &.rp-Tag--gauge{
+        position: relative;
+        overflow: hidden;
+        span{
+            transition:left 0.1s ease-out 0, width 0.25s ease-out 0.1s;
+            transition:width 350ms;
+            box-sizing: border-box;
+            display: block;
+            padding:3px 0;
+            top:0;
+            left:0;
+            position: absolute;
+            background:$cTurquoise;
+            color:$cWhite;
+            font-weight: $fwBold;
+            text-transform: lowercase;
+            overflow: hidden;
+            white-space: nowrap;
+            &:before, &:after{
+                content:"";
+                display: inline-block;
+                width:14px;
+                height:1px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:$tablet){
+    .rp-Tag{
+        font-size: 0.7em;
+    }
+}

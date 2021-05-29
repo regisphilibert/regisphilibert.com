@@ -1,0 +1,47 @@
+.rp-Stats{
+	margin-bottom: 0.5em;
+}
+.rp-Progress{
+	border:1px solid $cTurquoise;
+	position: relative;
+	font-size:0.5em;
+	font-weight:$fwSemiBold;
+	text-align: left;
+	max-width:70%;
+	display: inline-block;
+	&:before, span{
+		padding:0.33em 1em;
+	}
+	&:before{
+		content: attr(data-text);
+		color:$cTurquoise;
+		position: absolute;
+		top:0;
+		left:0;
+		display:inline-block;
+
+	}
+	span{
+		display: block;
+		color:white;
+		position: relative;
+		background-color:$cTurquoise;
+		overflow:hidden;
+		white-space:nowrap;
+	}
+
+}
+
+@media(min-width:$tablet){
+	.rp-Stats{
+		margin-bottom: 1em;
+	}
+	.rp-Progress{
+		font-size:0.7em;
+		display: block;
+		margin:0.5em 0;
+		&:before, span{
+			padding:0.2em 1em;
+		}
+	}
+}

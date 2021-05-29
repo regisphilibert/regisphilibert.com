@@ -1,0 +1,13 @@
+.rp-CTA{
+    @extend .background-poly;
+    @extend .background-poly--cover;
+    padding:0 0.7em;
+    &:after{
+    	transition:100ms;
+    }
+    &:active{
+        &:after{
+            transform:skewX(0deg);
+        }
+    }
+}

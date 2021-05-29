@@ -1,0 +1,39 @@
+$cWarning: lighten($cOrange, 20);
+.rp-Notice{
+	background-color:$cWhite;
+	position: relative;
+	border:1px solid $cTurquoise;
+	//border-top-width:5px;
+	font-size:0.9rem;
+	margin:1rem 0;
+	//line-height:1.2em;
+	code{
+		background-color:$cNearWhite;
+	}
+}
+.rp-Notice__head{
+	background-color:$cTurquoise;
+	color:$cNearWhite;
+	padding:0.2em 1em;
+	font-size: 0.8em;
+	font-weight:$fwSemiBold;
+	text-transform: uppercase;
+}
+.rp-Notice__body{
+	padding:0.6em 1em 0.7em 1em;
+}
+.rp-Notice--warning{
+	border-color:$cWarning;
+	.rp-Notice__head{
+		background-color:$cWarning;
+	}
+}
+$chalkBlack: lighten($cBlack, 15);
+.rp-Notice--aside{
+	font-size:0.8em;
+	border-color: $chalkBlack;
+	.rp-Notice__head{
+		color: $cWhite;
+		background-color: $chalkBlack;
+	}
+}

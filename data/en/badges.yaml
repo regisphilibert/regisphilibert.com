@@ -1,0 +1,80 @@
+- Name: Hugo
+  Icon: hugo
+  SVG: true
+  Big: true
+  Text: This is the best static site generator out there. I code my websites with it, I
+    [write about it](https://regisphilibert.com/tags/hugo/), I'm always eager to work with
+    it! Go [Hugo](https://gohugo.io/)!
+
+- Name: JAMStack
+  Big: true
+  Text: |
+    [JAMStack](https://jamstack.org/best-practices/) is the future of web. 
+    This is hosting without FTP, data without PhpMyAdmin, this is life without cPanels... 
+    
+    That's where we're going the web and I. But please hop in, there's room for everyone.
+
+- Icon: wordpress
+  Big: true
+  Name: Wordpress
+  Text: Yep, it takes up most of my projects. Seven years working with it really build up your expertise. Handsdown it's the best CMS Backoffice out there and the world knows it. Beside with a little help of Rest API its backoffice is all you need.
+
+- Name: Gatsby
+  Text: My second choice for building static websites, Gatsby nicely sits on top or bottom of your React project!
+  Icon: gatsby
+  SVG: true
+
+- Name: Netlify
+  Icon: netlify
+  SVG: true
+  Text: They're a big part of the JAMStack revolution mentioned up there and I'm a loyal user.
+
+- Icon: react
+  Name: React
+  Text: Rarely without Gatsby...
+
+- Icon: graphql
+  SVG: true
+  Name: GraphQL
+  Text: Those queries are fun!
+
+- Icon: angular
+  Name: Angular
+  Text: I'm very familiar with our old friend [AngularJS](https://angularjs.org/), I built many personnal projects with it and low level internal job as well! I'm really having fun exploring its powerful [younger self](https://angular.io/) though.
+
+- Icon: vuejs
+  Name: Vue.js
+  Text: Trained myself on serveral tutorials out there. Can't wait to go pro though.
+
+- Icon: laravel
+  Guess: true
+  Name: Laravel
+  Text: My PHP framework of choice. I built the 375mtl API with it plus a bunch of
+    personnal projects.
+
+- Icon: git
+  Name: GIT
+  Text: Yes! And before you ask, I take it neat, straight from the terminal. ([GitHub profile here](https://github.com/regisphilibert))
+
+- Icon: node-js
+  Name: Node.js
+  Text: Mostly through existing packages! I use Yarn for managing those because... emojis 🤩.
+
+- Icon: grunt
+  Name: Grunt
+  Text: Been doing a lot fo Gulp until I moved to Grunt, no idea why.
+
+- Icon: sass
+  Name: Sass
+  Text: My preprocessor of choice, every projects.
+
+- Name: "🤡"
+  Text: I'm afraid of clowns... Look a this creep!
+
+- Icon: font-awesome-flag
+  Name: Font Awesome
+  Text: Credit where credit's due! Most of those icons are [FA5](https://fontawesome.com/).
+
+- Icon: pied-piper
+  Name: Pied Piper
+  Text: Ah ah.

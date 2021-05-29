@@ -1,0 +1,29 @@
+[build]
+publish = "public"
+command = "hugo --minify -e cached"
+
+[build.environment]
+  GO_VERSION = "1.14"
+  NODE_VERSION = "15.4.0"
+  HUGO_VERSION = "0.83.1"
+  TND_SITE_ID = "rp"
+
+[context]
+
+[context.production]
+
+[context.production.environment]
+HUGO_ENV = "staging"
+
+[context.deploy-preview]
+command = "hugo --minify -e cached -D -b $DEPLOY_PRIME_URL"
+[context.deploy-preview.environment]
+HUGO_ENV = "staging"
+
+[context.branch-deploy]
+command = "hugo --minify -e cached -b $DEPLOY_URL"
+[context.branch-deploy.environment]
+HUGO_ENV = "staging"
+
+[context.main]
+command = "hugo --minify -e cached -b $DEPLOY_URL"

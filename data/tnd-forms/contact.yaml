@@ -1,0 +1,22 @@
+---
+# This is a form example to be consumed by TND Forms
+# More info here: https://github.com/theNewDynamic/hugo-module-tnd-forms#create-forms
+id: contact
+# formspree/netlify
+provider: netlify
+redirect: "/thank-you/"
+submit: Reach me
+fields:
+- template: form-input-default
+  type: email
+  label: Name
+  name: name
+  placeholder: Email
+  required: true
+- template: form-input-default
+  type: textarea
+  label: Message
+  placeholder: Message
+  name: message
+  required: true
+captcha: false

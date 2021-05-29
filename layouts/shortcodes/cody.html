@@ -1,0 +1,7 @@
+{{- with .Get 0 -}}
+	{{- with $.Page.Resources.GetMatch (printf "{*%s*,**/%s*}" .) -}}
+		{{- if eq .MediaType.MainType "application" -}}
+			{{- highlight .Content .File.Ext "" -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}

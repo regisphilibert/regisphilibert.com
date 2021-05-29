@@ -1,0 +1,13 @@
+<style type="text/css">
+	{{ (.Scratch.Get "critical").Content | safeCSS }}
+</style>
+{{ with .Scratch.Get "style" }}
+	<link 
+		href="{{ .Permalink }}"
+		rel="stylesheet"
+		{{- with .Data.Integrity }}
+			integrity="{{ . | safeHTMLAttr }}"
+	        crossorigin="anonymous"
+		{{- end -}}	
+	>
+{{ end }}

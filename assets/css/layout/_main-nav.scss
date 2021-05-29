@@ -1,0 +1,110 @@
+.main-nav-a-is-active{
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    z-index:1;
+}
+.main-nav--xl{
+    display: none
+}
+@media (min-width:$xl){
+    .main-nav--xs{
+        display: none;
+    }
+    .main-nav--xl{
+        display: block
+    }
+}
+.main-nav{
+    font-style: italic;
+    font-size: 18px;
+    line-height:1.6em;
+    margin-top:10px;
+    p{
+        margin:0;
+        
+            position: relative;
+            z-index:1;
+        
+    }
+    a{
+        cursor:pointer;
+    }
+    &.main-nav--poly{
+        a{
+            @extend .background-poly;
+            &:after{
+                transition:150ms;
+                background-color:#ccc;
+            }
+            &:hover, &.current{
+                &:after{
+                    background-color:$cYellow;
+                }
+            }
+            &:active{
+                &:after{
+                    transform:skew(0deg);
+                }
+            }
+        }
+    }
+    @media screen and (min-width:$desktop){
+        font-size:22px;
+        max-width: 500px;
+        margin:0 auto;
+    }
+    @media screen and (max-width:($xl - 1)) {
+        p{
+            display: inline-block;
+        }
+    }
+    @media screen and (min-width:$xl) {
+        &.main-nav--poly{
+            a{
+                &:after{
+                    width:150px;
+                    right:-13px;
+                }
+                &.current:after{
+                    margin-right:-25px;
+                }
+            }
+        }
+        p:first-child{
+            margin-bottom:15px;
+        }
+        p{
+            margin-bottom:10px;
+        }
+    }
+    @media screen and (min-width:$xxl) {
+        font-size:25px;
+    }
+}
+// Preventing font-size bump in Japanese (nav items big enough there)
+@media screen and (min-width:$xxl) {
+    [lang="ja"] .main-nav{
+        font-size:22px;
+    }
+}
+
+.rp-section-post, .rp-section-tags{
+    .main-nav.main-nav--poly a[data-section="post"]::after{
+        background-color:$cYellow;
+        @media (min-width:$desktop){
+            margin-right:-25px;
+        }
+    }
+}
+
+
+.rp-section-project, .rp-section-project_tags{
+    .main-nav.main-nav--poly a[data-section="project"]::after{
+        background-color:$cYellow;
+        @media (min-width:$desktop){
+            margin-right:-25px;
+        }   
+    }
+}

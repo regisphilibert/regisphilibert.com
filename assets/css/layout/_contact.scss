@@ -1,0 +1,80 @@
+/* ==========================================================================
+   CONTACT
+   ========================================================================== */
+.rp-contact{
+    position: relative;
+    .rp-discreet{
+        margin-top:10px;
+        text-align: center;
+    }
+    .rp-contact__success, .rp-contact__form{
+        transition: opacity 300ms;
+    }
+    .rp-contact__success{
+        display: none;
+        font-weight: $fwLight;
+        span{
+            white-space: pre-wrap;
+        }
+        label{
+            font-style: italic;
+            font-weight: $fwSemiBold;
+        }
+    }
+    @media screen and (min-width:$xl){
+        .rp-contact__success{
+            padding:1.6em 0;
+            text-align: inherit;
+        }
+    }
+}
+
+@media (min-width:$tablet){
+    .rp-section-contact .rp-Entry__head{
+        display:flex;
+        justify-content:space-between;
+        .rp-contact__title{
+            text-align:left;
+        }
+        .rp-Socials{
+            text-align: right;
+        }
+    }
+}
+.rp-form{
+    .rp-form-message{
+        display: block;
+        margin-bottom:10px;
+    }
+    [type='submit']{
+        outline: none;
+        transition:300ms;
+        text-transform: none;
+        &[disabled]{
+            transform:skew(-17deg);
+        }
+    }
+}
+.rp-button{
+    border:0;
+    background:$cBlack;
+    color:white;
+    padding:5px;
+    display: inline-block;
+    font-style:italic;
+    text-transform: lowercase;
+    //font-weight: $fwBold;
+    font-size: 25px;
+    transition:150ms;
+    &:hover{
+        background:$cYellow;
+    }
+}
+.rp-button--hero{
+    display: block;
+    width:100%;
+    text-align: center;
+}
+.rp-input[disabled]{
+    opacity: 0.5;
+}

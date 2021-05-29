@@ -1,0 +1,34 @@
+{{ $currentPage := . }}
+{{ with .Site.Menus.mobile }}
+	<nav class="main-nav main-nav--poly main-nav--xs" style="margin-bottom:-20px">
+		{{ range . }}
+			<a href="{{ .URL }}" {{ if $currentPage.IsMenuCurrent "mobile" . }} class="current"{{ end }}
+				{{ with .Page }}
+					data-section="{{ (cond .IsHome "project" .Section) }}"
+				{{ end }}
+				
+			>{{ .Name }}</a>
+		{{ end }}
+	</nav>
+{{ end }}
+{{ with .Site.Menus.desktop }}
+	<nav class="main-nav main-nav--poly main-nav--xl">
+		{{ range . }}
+			<p>
+				<a href="{{ .URL }}" {{ if $currentPage.IsMenuCurrent "desktop" . }} class="current"{{ end }}
+				{{ with .Page }}
+					data-section="{{ .Section }}"
+				{{ end }}
+				{{ $title := false }}
+				{{ with .Page }}
+					{{ $title = .Title }}
+				{{ end }}
+				{{ with .Pre }}
+					{{ $title = . }}
+				{{ end }}
+				title="{{ $title }}" 
+				>{{ .Name }}</a>
+			</p>
+		{{ end }}
+	</nav>
+{{ end }}

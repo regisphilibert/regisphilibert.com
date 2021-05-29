@@ -1,0 +1,112 @@
+$rpSwitchSize:2.2em;
+.rp-Switch{
+	position: relative;
+	user-select: none;
+  input{
+    position: absolute;
+    opacity: 0;
+  }
+  label{
+		color:black;
+		padding:0;
+		height:$rpSwitchSize;
+		width:auto;
+		display: inline-block;
+		line-height:1.1em;
+		border-radius:3px;
+		background-color: #ccc;
+		font-weight: 400;
+		transition:300ms;
+		margin-bottom: 0;
+		color:#444;
+		&:before{
+			content:"";
+			padding:0 .5em;
+			display: inline-block;
+			line-height:$rpSwitchSize;
+			float:left;
+			min-width:$rpSwitchSize;
+			height:$rpSwitchSize;
+			background-color: black;
+			border-radius:3px;
+			background-color: #999999;
+			transition:300ms;
+		}
+		&:after{
+			content:"no";
+			padding:0 .5em;
+			display: inline-block;
+			overflow: hidden;
+			text-align: center;
+			line-height:$rpSwitchSize;
+			height:$rpSwitchSize;
+			min-width:$rpSwitchSize * 1.5;
+			text-align: center;
+		}
+		&[data-is-off]{
+			&:after{
+				content:attr(data-is-off)
+			}
+		}
+		&[data-is-off-emoji]{
+			&:before{
+				content:attr(data-is-off-emoji)
+			}
+		}
+	}
+	input:checked + label{
+		background-color: lighten($cYellow, 20%);
+		&:before{
+			content:"🤠";
+			float:right;
+			background-color: $cYellow;
+		}
+		&:after{
+			content:"yes";
+		}
+		&[data-is-on]{
+			&:after{
+				content:attr(data-is-on);
+			}
+		}
+		&[data-is-on-emoji]{
+			&:before{
+				content:attr(data-is-on-emoji)
+			}
+		}
+	}
+	.rp-Switch__item{
+		background-color:#eeeeee;
+		display: block;
+		position: relative;
+		z-index: 1;
+		border-radius:5px;
+		padding:1em 0;
+		text-align: center;
+		width:50%;
+		float:left;
+		text-transform: uppercase;
+		& + .rp-Switch__item{
+			left:-5px;
+		}
+	}
+	.rp-Switch__item--active{
+		background-color: $cYellow;
+		font-weight: bold;
+		z-index: 2;
+	}
+}
+.rp-Switch--padded{
+	display: inline-block;
+	border-radius:4px;
+	padding:4px;
+	border:1px solid #999999;
+	label{
+		display: block;	
+	}
+}
+@media (max-width:$tablet - 1 ){
+	.rp-Switch{
+		font-size:0.8em;
+	}
+}

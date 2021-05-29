@@ -1,0 +1,20 @@
+.pagination{
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-family:$ffCode;
+	a{
+		color:$cTurquoise;
+	}
+	li{
+		&.active{
+			a{
+				color:$cBlack;
+				font-size: 1.2em;
+				text-decoration: none;
+			}
+		}
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,33 @@
+{{- $.Scratch.Set "section" .Section -}}
+
+{{- $.Scratch.Add "classes" (slice "rp-body") -}}
+
+{{- if .IsHome -}}
+	{{- $.Scratch.Add "classes" (slice "rp-home") -}}
+{{- end -}}
+
+{{- if eq .Layout "contact" -}}
+	{{- $.Scratch.Set "section" "contact" -}}
+{{- end -}}
+
+{{- if eq .Layout "about" -}}
+	{{- $.Scratch.Set "section" "about" -}}
+{{- end -}}
+
+{{- $.Scratch.Add "classes" (slice (printf "rp-section-%s" ($.Scratch.Get "section"))) -}}
+
+{{- if .Site.Params.ajax -}}
+	{{- $.Scratch.Add "classes" (slice "rp-full-js") -}}
+{{- end -}}
+
+{{- if .Site.Params.prism -}}
+	{{- $.Scratch.Add "classes" (slice "prism-await") -}}
+{{- end -}}
+{{- if .Data.Singular -}}
+	{{- if in "category tag" .Data.Singular -}}
+		{{- $.Scratch.Set "section" "post" -}}
+	{{- end -}}
+	{{- if in "project_tag" .Data.Singular -}}
+		{{- $.Scratch.Set "section" "project" -}}
+	{{- end -}}
+{{- end -}}

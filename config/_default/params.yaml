@@ -1,0 +1,155 @@
+description: I'm a front end dev from Montréal specialized in Hugo and Wordpress! How can I help?
+author: Regis Philibert
+jobtitle: Front Dev in Montreal
+twitter_handle: regisphilibert
+emotion: newyear
+ajax: false
+env: local
+less: false
+sass: true
+contactFormApi: 'https://api.regisphilibert.com/mail/'
+prism: false
+imagesizes:
+  '500': small
+  '750': medium
+
+# ###############
+# TND SEO
+# https://github.com/theNewDynamic/hugo-module-tnd-seo#settings
+# ###############
+tnd_seo:
+  jsonld: true
+  enable_follow: true
+  disable_title: false
+
+# ###############
+# TND STYLES
+# https://github.com/theNewDynamic/hugo-module-tnd-styles#fonts
+# ###############
+tnd_styles:
+  styles:
+    - name: main
+      path: css/style.scss
+    - name: critical
+      path: css/critical.scss
+      inline: true
+  fonts:
+  - family: Open
+    file: fonts/open-sans-v17-latin-300
+    weight: 300
+    style: normal
+  - family: Open
+    file: fonts/open-sans-v17-latin-300italic
+    weight: 300
+    style: italic
+  - family: Open
+    file: fonts/open-sans-v17-latin-regular
+    weight: 400
+  - family: Open
+    file: fonts/open-sans-v17-latin-italic
+    weight: 400
+    style: italic
+  - family: Open
+    file: fonts/open-sans-v17-latin-600
+    weight: 600
+  - family: Open
+    file: fonts/open-sans-v17-latin-600italic
+    weight: 600
+    style: italic
+  - family: Open
+    file: fonts/open-sans-v17-latin-700
+    weight: 700
+    style: normal
+  - family: Open
+    file: fonts/open-sans-v17-latin-700italic
+    weight: 700
+    style: italic
+
+# ###############
+# TND SCRIPTS
+# https://github.com/theNewDynamic/hugo-module-tnd-scripts
+# ###############
+tnd_scripts:
+  scripts:
+    - name: main
+      path: /js/index.js
+
+# ###############
+# TND MEDIA
+# https://github.com/theNewDynamic/hugo-module-tnd-media#settings
+# If used in combination with imgix:
+# https://github.com/theNewDynamic/hugo-module-tnd-imgix#settings
+# ###############
+tnd_media:
+  storage: bundle
+# If imgix is used:
+# imgix: imgix.project.net
+# defaults:
+#   auto: format
+#   ch: Width,DPR
+#   q: 95
+
+# ###############
+# TND SOCIALS
+# https://github.com/theNewDynamic/hugo-module-tnd-socials#configure
+# ###############
+tnd_socials:
+  services:
+  - name: twitter
+    handle: theNewDynamic
+
+# ###############
+# TND FORMS
+# ###############
+tnd_forms:
+  css:
+    form: 'rp-Form rp-contact__form'
+    control: rp-InputGroup rp-InputGroup--fancy
+    hidden: 'hidden'
+    submit: rp-button rp-button--hero p-2
+    input: border
+    textarea: border
+
+# ###############
+# TND REDIRECTS
+# https://github.com/theNewDynamic/hugo-module-tnd-redirects#api
+# ###############
+tnd_redirects:
+  use_aliases: true
+  rules:
+  # Following rule for production
+  # - origin: https://that-project.netlify.com/*
+  #   target: https://www.that-project.com/:splat
+  #   code: 301
+  #   force: true
+    - origin: /example-1234
+      target: /example
+
+# ###############
+# TND HEADERS
+# https://github.com/theNewDynamic/hugo-module-tnd-headers#adding-custom-headers
+# ###############
+tnd_headers:
+  groups:
+    - headers:
+      - field: Content-Security-Policy
+        value: upgrade-insecure-requests
+      - field: Strict-Transport-Security
+        value: max-age=15768000
+      - field: X-Xss-Protection
+        value: 1; mode=block
+      - field: X-Frame-Options
+        value: DENY
+      - field: X-Content-Type-Options
+        value: nosniff
+      - field: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - field: Feature-Policy
+        value: camera 'none'; geolocation 'none'; microphone 'none';
+
+# ###############
+# TND Search
+# https://github.com/theNewDynamic/hugo-module-tnd-search/tree/master#settings
+# ###############
+tnd_search:
+  service: algolia

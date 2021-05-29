@@ -1,0 +1,81 @@
+/*********************************************
+            RESPONSIVE HELPERS AND RULES
+*********************************************/
+/*
+
+<div class="mobile-block">
+    You can only see me on mobile
+</div>
+<a class"mobile-inline tablet-inline">
+You can see me on both mobile and tablet, but not desktop
+</a>
+We can also use to alter text from one plateform to the other.
+For exemple the menu item PROFESSIONELS is too long for ipad.
+Solution can be to put inside the a tag :
+<span class="mobile-inline desktop-inline">Professionnels</span><span class="tablet-inline">Pros</span>
+*/
+
+
+.mobile-inline, .mobile-inline.tablet-inline, .mobile-inline.desktop-inline{display: inline;}
+.mobile-block, .mobile-block.tablet-block, .mobile-block.desktop-block{display: block;}
+.mobile-inline-block, .mobile-inline-block.tablet-inline-block, .mobile-inline-block.desktop.inline-block{display: inline-block;}
+.mobile-cell, .mobile-cell.tablet-cell, .mobile-cell.desktop-cell{display:table-cell};
+.mobile-row, .mobile-row.tablet-row, .mobile-row.desktop-row{display:table-row};
+
+.tablet-inline, .desktop-inline, .tablet-inline.desktop-inline{display: none;}
+.tablet-block, .desktop-block, .tablet-block.desktop-block{display: none;}
+.tablet-inline-block, .desktop-inline-block, .tablet-inline-block.desktop-inline-block{display: none;}
+.tablet-cell, .desktop-cell, .tablet-cell.desktop-cell{display: none;}
+.tablet-row, .desktop-row, .tablet-row.desktop-row{display: none;}
+
+@media only screen and (min-width: $tablet){
+.tablet-inline, .mobile-inline.tablet-inline, .tablet-inline.desktop-inline{display:inline}
+.tablet-block, .mobile-block.tablet-block, .tablet-block.desktop-block{display:block}
+.tablet-inline-block, .mobile-inline-block.tablet-inline-block, .tablet-inline-block.desktop-inline-block{display:inline-block}
+.tablet-cell, .mobile-cell.tablet-cell, .tablet-cell.desktop-cell{display:table-cell}
+.tablet-row, .mobile-row.tablet-row, .tablet-row.desktop-row{display:table-row}
+
+.mobile-inline, .desktop-inline, .mobile-inline.desktop-inline{display: none;}
+.mobile-block, .desktop-block, .mobile-block.desktop-block{display:none;}
+.mobile-inline-block, .desktop-inline-block, .mobile-inline-block.desktop-inline-block{display:none;}
+.mobile-cell, .desktop-cell, .mobile-cell.desktop-cell{display: none;}
+.mobile-row, .desktop-row, .mobile-row.desktop-row{display: none;}
+}
+
+@media only screen and (min-width: $desktop){
+
+.desktop-inline, .desktop-inline.mobile-inline, .desktop-inline.tablet-inline{display: inline;}
+.desktop-block, .desktop-block.mobile-block, .desktop-block.tablet-block{display: block;}
+.desktop-inline-block, .desktop-inline-block.mobile-inline-block, .desktop-inline-block.tablet-inline-block{display: inline-block;}
+.desktop-cell, .desktop-cell.mobile-cell, .desktop-cell.tablet-cell{display: table-cell;}
+.desktop-row, .desktop-row.mobile-row, .desktop-row.tablet-row{display: table-row;}
+
+.mobile-inline, .tablet-inline, .mobile-inline.tablet-inline{display:none}
+.mobile-block, .tablet-block, .mobile-block.tablet-block{display:none}
+.mobile-inline-block, .tablet-inline-block, .mobile-inline-block.tablet-inline-block{display:none}
+.mobile-cell, .tablet-cell, .mobile-cell.tablet-cell{display:none}
+.mobile-row, .tablet-row, .mobile-row.tablet-row{display:none}
+}
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+.align-right{
+    text-align:right;
+}
+.align-center{
+    text-align: center;
+}
+
+
+/* Contain floats: h5bp.com/q */
+.clearfix{
+    *zoom:1;
+    &:before, &:after{
+        content:"";
+        display: table;
+    }
+    &:after{
+        clear:both;
+    }
+}

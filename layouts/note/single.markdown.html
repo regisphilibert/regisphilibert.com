@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	{{- partial "head.html" . -}}
+
+	<body class="{{ delimit ($.Scratch.Get "classes") " " }}">
+		<div class="rp-wrapper">
+			<div class="rp-main">
+				<div class="rp-container">
+					<div class="rp-Entry">
+						<article class="rp-Entry__main" style="max-width:1200px">
+							<div class="rp-Entry__content wysiwyg-content">
+								{{ highlight (readFile .File.Path) "markdown" "" }}
+							</div>
+							
+						</article>
+					</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

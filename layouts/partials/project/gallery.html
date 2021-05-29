@@ -1,0 +1,12 @@
+{{ range $index, $element := .dot.Resources.ByType "image" }}
+	{{ $file := . }}
+	{{ if and (not (strings.Contains .RelPermalink "featured.")) (not (strings.Contains .RelPermalink ".draft."))}}
+	<div class='{{ if (eq $index 0) }}rp-project__main{{else}}rp-project__item{{end}} {{if strings.Contains .RelPermalink "_small."}}rp-project__item--small{{ end }}'>
+		{{ range $width, $size := $.dot.Site.Params.imagesizes }}
+			{{ $image := $file.Resize (printf "%sx" $width)  }}
+			<source srcset='{{ $image.Permalink}}' media='(max-width: {{ $width }}px)' />
+		{{ end }}
+		<img src="{{ .Permalink }}" alt="" />
+	</div>
+	{{ end }}
+{{ end }}

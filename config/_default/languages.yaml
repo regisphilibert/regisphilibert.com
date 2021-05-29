@@ -1,0 +1,21 @@
+# Languages
+# Each language key stands as its language code
+# ################################
+en:
+  languageName: English
+  weight: 1
+  contentDir: content/en
+  flag: "🇬🇧"
+
+# Secondary language
+fr:
+  languageName: Français
+  weight: 2
+  contentDir: content/fr
+  flag: "🇫🇷"
+
+ja:
+  languageName: 日本語
+  weight: 3
+  contentDir: content/ja
+  flag: "🇯🇵"

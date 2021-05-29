@@ -1,0 +1,18 @@
+.rp-More{
+	text-align: right;
+	text-transform: lowercase;
+	font-family:$ffCode;
+	border-bottom:1px dashed $cTurquoise;
+	padding-bottom:1em;
+	margin-top:1em;
+	a, a:visited, a:link{
+		.wysiwyg-content & {
+			color:black;
+		}
+	}
+    .rp-CTA:hover{
+        &:after{
+            right:-5%;
+        }
+    }
+}

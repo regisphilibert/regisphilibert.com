@@ -1,0 +1,26 @@
+.rp-Project__content{
+    font-size: 18px;
+    text-align: center;
+}
+.rp-Project__desc{
+    a{
+        text-decoration: underline;
+    }
+}
+.rp-Project__title{
+    font-weight: $fwBlack;
+    font-size: 1.5em;
+    line-height: 1.05em;
+    text-transform: uppercase;
+    a{
+        transition:color 150ms;
+        &:hover{
+            color:$cTurquoise;
+        }
+    }
+}
+@media screen and (min-width:$tablet){
+    .rp-Project__content{
+        text-align: left;
+    }
+}

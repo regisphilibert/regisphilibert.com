@@ -1,0 +1,26 @@
+.rp-Index{
+	h2{
+		font-size:1.1em;
+		font-weight: $fwSemiBold;
+		margin-bottom:.2em;
+	}
+	a{
+		display: block;
+	}
+	&  nav  ul  li{
+		font-size:0.8em;
+		li {
+			padding-left:1em;
+			margin:0.3em 0;
+		}
+	}
+
+	& > nav > ul > li{
+		& > a{
+			border-bottom:2px solid $cTurquoise
+		}
+		& > ul > li > a{
+			//border-bottom:1px solid $cTurquoise
+		}
+	}
+}

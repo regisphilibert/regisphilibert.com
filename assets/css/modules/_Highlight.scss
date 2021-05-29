@@ -1,0 +1,247 @@
+$cssSelectorColor:DeepSkyBlue ;
+$preBorderColor:#ece9e2;
+//$preBorderColor:$cTurquoise;
+$preBackgroundColor:lighten($bg, 3);
+$cGreen:#690;
+$cBlue:#07a;
+$cGray:#999;
+$cBrown:#a67f59;
+code{
+    font-family:$ffCode;
+}
+.prism-await{
+    pre{
+        opacity: 0;
+        transition:opacity 150ms;
+    }
+    &.prism-ready{
+        pre{
+            opacity: 1;
+        }
+    }
+}
+.wysiwyg-content{
+    code{
+        background-color:$preBackgroundColor;
+        padding:0.1em 0.4em;
+        font-size: .8em;
+        border: 1px solid #ece9e2;
+        border-radius: 5px;
+    }
+}
+.highlight{
+    //overflow:hidden;
+    position: relative;
+    margin: 1.4em 0 1em;
+
+    pre{
+        text-align: left;
+        margin:0;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        tab-size: 4;
+        hyphens: none;
+        overflow: scroll;
+        background-color: $preBackgroundColor;
+        border: 1px solid $preBorderColor;
+        border-radius: 5px;
+        border-top-right-radius:0;
+        padding:10px;
+    }
+    pre{
+        font-size: 85%;
+        font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    }
+    code{
+        background-color:transparent;
+        border:0;
+        font-size: 0.9em;
+        padding:0;
+        &::before{
+            content:attr(data-lang);
+            position: absolute;
+            font-size:75%;
+            display: block;
+            background:$preBackgroundColor;
+            bottom:calc(100% - 1px);
+            color:$cGray;
+            right:0;
+            padding:0.2em 0.5em;
+            //color:$cBlack;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px solid $preBorderColor;
+            z-index: 3;
+        }
+    }
+    & + & {
+        margin-top:1.4em;
+    }
+}
+.chroma {
+    .col-md-6 & {
+        @media(min-width:$tablet){
+            code:before{
+                display: none;
+            }
+        }
+    }
+    [data-lang="nohighlight"]{
+        &:before{
+            display: none;
+        }
+    }
+    [data-lang="yaml"]{
+        .c{
+            color:$cGray;
+        }
+    }
+    [data-lang="diff"]{
+        .gd{
+            color:red;
+        }
+        .gi{
+            color:green;
+        }
+    }
+    [data-lang="go-html-template"]{
+        color:$cGray;
+        &:before{
+            content:"Go Template"
+        }
+        .cp{
+            color:$cGray;
+        }
+        .nx{
+            color:lighten($cOrange, 20%);
+            
+        }
+        .o + .nx{
+            color:$cBlue;
+        }
+        .s{
+            color:$cGreen;
+        }
+        .o{
+            color:$cBlack;
+        }
+        .k{
+           color: $cBlack;
+           font-weight:bold;
+           //font-weight:400;
+        }
+        .na{
+            color:$cOrange;
+            color:$cBlue;
+        }
+        .nt, .p{
+            color:$cBrown;
+        }
+    }
+    [data-lang="go"]{
+        color:black;
+        .k{
+            color:$cBlue;
+        }
+        .o{
+            color:$cBrown;
+        }
+        .p{
+            color:$cBrown;
+        }
+        .s{
+            color:#690
+        }
+        .k{
+            //color:#07a
+        }
+        .c1, .cm{
+            color:$cGray;
+        }
+    }
+    [data-lang="twig"]{
+        .k{
+            color:$cBlue;
+        }
+        .cp{
+            color:$cGray;
+        }
+        .nv{
+            color:lighten($cOrange, 20%);
+        }
+
+        .s1, .s2{
+            color:$cGreen;
+        }
+    }
+    [data-lang="php"]{
+        .nv{
+            color:lighten($cOrange, 20%);
+        }
+        .s2{
+            color:$cGreen;
+        }
+        .nx{
+            color:$cBlue;
+        }
+        .c1{
+            color:$cGray;
+        }
+    }
+    [data-lang="css"], [data-lang="scss"]{
+        color:black;
+        .nc{
+            color:lighten($cOrange, 20%);
+        }
+        .p, .c{
+            color:#999
+        }
+        .s{
+            color:#690
+        }
+        .k{
+            color:#07a
+        }
+    }
+    [data-lang="html"]{
+        color:black;
+        .c{
+            color:$cGray;
+        }
+        .p{
+            color:$cBrown;
+        }
+        .nt{
+            color:$cBrown;
+        }
+        .na{
+            color:$cBlue;
+        }
+        .s{
+            color:#690
+        }
+        .k{
+            color:#07a
+        }
+    }
+}
+
+pre.language-nohighlight{
+    font-size: 0.8rem;
+    background-color: $preBackgroundColor;
+    padding:10px;
+    border:1px solid $preBorderColor;
+    border-radius: 5px;
+}
+pre.language-less,
+pre.language-css{
+    .selector{
+        color:$cssSelectorColor;
+    }
+    .token.variable{
+        color:$cTurquoise;
+    }
+}

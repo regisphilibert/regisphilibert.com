@@ -1,0 +1,12 @@
+<div class="rp-project">
+	<div class="rp-project__aside">
+		{{ partialCached "project/details" (dict "dot" .dot "template" .template) .dot.Title }}
+	</div>
+	{{ if eq .template "single" }}
+		{{ partialCached "project/gallery" (dict "dot" .dot) .dot.Title }}
+	{{ else }}
+	<div class="rp-project__main">
+		{{ partialCached "project/featured" (dict "dot" .dot "template" .template) .dot.Title }}
+	</div>
+	{{ end }}
+</div>

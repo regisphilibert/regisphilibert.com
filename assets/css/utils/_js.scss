@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Ajax View Mechanism
+   ========================================================================== */
+.rp-views{
+    position: relative;
+    .rp-view{
+        transition:150ms;
+    }
+}
+.rp-view{
+    display: none;
+    position:relative;
+    &.active{
+        display: block;
+    }
+}
+[class^="js-action"]{
+    cursor:pointer;
+}
+
+[class^="js-debug"]{
+    display: none;
+    .jumpstart-debug-user & {
+        display: block;
+    }
+}
+.js-debug-info{
+    position: fixed;
+    padding:5px;
+    font-size:10px;
+    background:#ccc;
+    border:1px solid #f5f5f5;
+    bottom:10px;
+    left:10px;
+    z-index: 1000;
+}
+.js-debug-nav{
+    position: absolute;
+    bottom:0;
+    width:100%;
+}

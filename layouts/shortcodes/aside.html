@@ -1,0 +1,10 @@
+<div class="rp-Notice rp-Notice--aside">
+	{{ with .Get "title" }}
+		<div class="rp-Notice__head">
+			{{ . }}
+		</div>	
+	{{ end }}
+	<div class="rp-Notice__body">
+		{{ .Inner }}
+	</div>
+</div>

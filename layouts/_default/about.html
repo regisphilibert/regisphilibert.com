@@ -1,0 +1,62 @@
+{{ define "main" }}
+	<div class="rp-Entry">
+		<div class="rp-Entry__main">
+			<div class="rp-page-header">
+				<h1>{{ .Title }}</h1>
+			</div>
+			<div class="rp-Entry__content user-content">
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+	{{ $data := index .Site.Data .Site.Language.Lang }}
+	{{ $no_guess := slice "🤡" }}
+	{{ if $data.badges }}
+		<div class="user-content" style="cursor:pointer;">
+			<h2 id="skill-grid">{{ i18n "skill_grid_title" }}</h2>
+		</div>
+		<div style="text-align:center;margin-bottom:34px;">
+			<div class="rp-Switch">
+				<input id="logo-game-checkbox" onchange="toggleLogos(this)" type="checkbox" checked>
+				<label 
+					for="logo-game-checkbox"
+					data-is-on='{{- i18n "play_logos" -}}'
+					data-is-on-emoji="🤠"
+					data-is-off='{{- i18n "no_play_logos" -}}'
+					data-is-off-emoji="😒"
+				></label>
+			</div>
+		</div>
+		<div class="rp-Badges rp-Badges--show-logos">
+		{{ range $index, $element := where $data.badges "Draft" "!=" true }}
+			{{ $icon := false }}
+			{{ with .Icon }}
+				{{ $icon = . }}
+			{{ end }}
+			<div 
+				class="rp-Badge {{ if .Big }}rp-Badge--large{{ end }} {{ if .Full }}rp-Badge--full{{ end }}"
+				{{ if not (in $no_guess .Icon) }}
+					data-name="{{ .Name }}"
+				{{ end }}
+				id="{{ $index }}"
+				onclick="toggleBadge(this)"
+			>
+				<div class="rp-Badge__head">
+					{{ if $icon }}
+						{{ if .SVG }}
+							<svg class="rp-Badge__icon rp_Badge__icon--svg"><use xlink:href="#rp-svg-{{ .Icon }}"></use></svg>
+						{{ else }}
+							<i class="rp-Badge__icon fab fa-{{ .Icon }}"></i>
+						{{ end }}
+					{{ else }}
+						<span class="rp-Badge__icon">{{ .Name }}</span>
+					{{ end }}
+				</div>
+				<div class="rp-Badge__body">
+					{{ .Text | markdownify }}
+				</div>
+			</div>
+		{{ end }}
+		</div>
+	{{ end }}
+{{ end }}

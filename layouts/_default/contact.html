@@ -1,0 +1,23 @@
+{{ define "main" }}
+	<div class="rp-Entry">
+		<div class="rp-Entry__main">
+			<div class="rp-Entry__head">
+					<h1 class="rp-contact__title" data-success-message='{{ i18n "contact_thanks" }} (๑˃̵ᴗ˂̵)و'>{{ .Title }}</h1>
+						<div class="rp-Socials">
+							{{ with .Site.Data.socials }}
+								{{ range . }}
+									{{ partial "social" . }}
+								{{end}}
+							{{ else }}
+								{{ partial "socials_hard" }}
+							{{ end }}
+						</div>
+				</div>
+
+				<div class="rp-contact">
+				    {{ .Content }}
+				</div>
+			</div>
+		</div>
+	</div>
+{{ end }}

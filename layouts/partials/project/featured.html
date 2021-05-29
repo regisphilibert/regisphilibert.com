@@ -1,0 +1,31 @@
+{{ $original := .dot }}
+{{ if not (eq .dot.Lang "en") }}
+	{{ range .dot.Translations }}
+
+		{{ if eq .Lang "en" }}
+			{{ $original = . }}
+		{{ end }}
+	{{ end }}
+{{ end }}
+{{ $featured := $original.Resources.GetMatch "**feature*" }}
+{{ if $featured }}
+{{ if eq .template "single" }}
+	<div>
+	{{ else }}
+	<a 
+		href="{{ .dot.Permalink }}"
+	>
+	{{ end }}
+		<picture class="rp-project-media-img {{ with $featured.Params.border }}bordered{{ end }}">
+			{{ range $width, $size := $.dot.Site.Params.imagesizes }}
+				{{ $image := $featured.Resize (printf "%sx" $width)  }}
+				<source srcset='{{ $image.Permalink}}' media='(max-width: {{ $width }}px)' />
+			{{ end }}
+			<img src="{{ $featured.Permalink }}" alt="" />
+		</picture>
+	{{ if eq .template "single" }}
+	</div>
+	{{ else }}
+	</a>
+	{{ end }}
+{{ end }}

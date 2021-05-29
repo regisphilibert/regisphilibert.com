@@ -1,0 +1,23 @@
+.background-poly{
+    position: relative;
+    z-index:1;
+    &:after{
+        content:"";
+        position: absolute;
+        width:80%;
+        height:100%;
+        right:10%;
+        top:5%;
+        background:$cYellow;
+        z-index: -1;
+        transform:skewX(-17deg)
+    }
+}
+.background-poly.-cover, .background-poly--cover{
+    &:after{
+        width:105%;
+        height:120%;
+        right:-2.5%;
+        top:-10%;
+    }
+}

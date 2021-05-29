@@ -1,0 +1,25 @@
+[
+	{
+		"prefix":"guide"
+		,"name":"Instruction Guide JS"
+		,"type":"pdf"
+		,"ref":"90564568"
+	}
+	,{
+		"prefix":"checklist"
+		,"name":"Document Checklist"
+		,"type":"pdf"
+		,"ref":"90564572"
+	}
+	,{
+		"prefix":"photo_specs"
+		,"name":"Photo Specifications"
+		,"type":"pdf"
+		,"ref":"90564687"
+	}
+	,{
+		"prefix":"payment"
+		,"name":"Proof of Payment"
+		,"type":"word"
+	}
+]

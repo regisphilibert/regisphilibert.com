@@ -1,0 +1,31 @@
+# Config Base
+# This is where root config key goes.
+# ###################################
+title: 'Regis Philibert'
+baseURL: 'https://www.regisphilibert.com'
+DefaultContentLanguage: en
+enableRobotsTXT: true
+disableAliases: true
+disqusShortname: regisphilibert
+googleAnalytics: UA-24416415-1
+# If project needs to build future: 
+# buildFuture: true
+
+# Some bugs related to 404 template https://github.com/gohugoio/hugo/issues/7603
+disableKinds:
+  - '404'
+# googleAnalytics: UA-PROPERTY_ID
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+outputFormats:
+  markdown:
+    baseName: markdown
+    mediaType: "text/html"
+
+taxonomies:
+  tag: tags
+  category: categories
+  project_tag: project_tags

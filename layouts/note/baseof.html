@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	{{- partial "scratch/body_classes" . -}}
+	{{ $pageType := cond (eq .Layout "contact") "contact" "default" }}
+    {{- range .Translations -}}
+    	{{ $.Scratch.Set "translation_url" .Permalink }}
+    {{- end -}}
+	{{- partial "head.html" . -}}
+
+	<body class="{{ delimit ($.Scratch.Get "classes") " " }}">
+		<div style="display:block;position:absolute;margin:1.5rem;left:0;top:0;">
+			<a href="{{ .Site.BaseURL }}">🏠</a>
+			{{ with .Parent }}
+				{{ if ne .Kind "home" }}
+					<a href="{{ .Permalink }}">🗒️</a>
+				{{ end }}	
+			{{ end }}
+		    {{ range .Translations }}
+	            <a href="{{ .Permalink }}" class="no-ajax">{{ .Language.Params.flag }}</a>
+		    {{ end}}
+		</div>
+		<div class="rp-wrapper">
+			<div class="rp-main">
+				<div class="rp-container">
+					{{ block "main" . }}
+						<h3>Did you forget to define "main"?</h3>
+					{{ end }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

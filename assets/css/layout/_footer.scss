@@ -1,0 +1,14 @@
+$footerImgWidth:150px * 0.75;
+.rp-footer{
+    margin-top:3em;
+    margin-bottom:1em;
+    text-align: center;
+    .footer-img{
+        width:$footerImgWidth;
+        transition:ease-in 150ms;
+        margin-bottom:1em;
+    }
+    .footer-text{
+        font-size:14px;
+    }
+}

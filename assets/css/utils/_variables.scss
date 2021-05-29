@@ -1,0 +1,29 @@
+$tablet : 760px;
+$desktop : 960px;
+
+$xl:1170px;
+$xxl:1500px;
+
+$sans:"Open Sans", sans-serif;
+$sansCond:"Open Sans Condensed", sans-serif;
+$ffAudimat:"Audimat", sans-serif;
+$ffCode:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+$bg:#ebf4f3;
+$cBackground:$bg;
+$cHeaderBorder:darken($cBackground, 10%);
+$cWhite:#ffffff;
+$cGray:#ccc;
+$cNearWhite:#fffcf5;
+$cTurquoise:#44b6ae;
+$cYellow:#e6d223;
+$cPink:#e66666;
+$cOrange:#ff4e00;
+$cBlack:#303030;
+
+$fwLight:100;
+$fwRegular:300;
+$fwSemiBold:600;
+$fwBold:700;
+$fwBlack:800;
+$fsRem:18;
+$lh:1.222222222222em;

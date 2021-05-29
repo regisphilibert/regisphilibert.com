@@ -1,0 +1,41 @@
+.rp-project{
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-areas:
+		"aside"
+		"main";
+	grid-auto-flow:dense;
+	img, picture{
+		max-width:100%;
+		display: block;
+	}
+	.bordered{
+		border:1px solid $cHeaderBorder;
+	}
+	&:not(:last-child){
+		margin-bottom:90px;
+	}
+}
+@media (min-width:$tablet){
+	.rp-project{
+		grid-template-columns:repeat(6, 1fr);
+		grid-template-areas:
+		"main main main main aside aside";
+		grid-gap:30px;
+		&:not(:last-child){
+			margin-bottom:30px;
+		}
+	}
+}
+.rp-project__main{
+	grid-area:main;
+}
+.rp-project__aside{
+	grid-area:aside;
+}
+.rp-project__item{
+	grid-column:span 4;
+}
+.rp-project__item--small{
+	grid-column:span 2;
+}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $toc :=  .Params.toc }}
+<div class="rp-Entry{{ if $toc }} rp-Entry--with-sidebar{{ end }}">
+	
+	<article class="rp-Entry__main">
+		{{ partial "post/head.html" . }}
+		<div class="rp-Entry__content wysiwyg-content">
+			{{ .Content }}
+		</div>
+		
+	</article>
+	
+	{{ if $toc }}
+		<div class="rp-Entry__sidebar">
+		{{ partial "toc.html" . }}
+		</div>
+	{{ end }}
+</div>
+<div style="text-align: center;margin-bottom:50px;">
+	<span style="cursor:pointer;" class="back_top_top">⏫</span>
+</div>
+{{ end }}

@@ -1,0 +1,23 @@
+<script>
+    var elsTargetBlank = document.querySelectorAll('[target="_blank"]');
+    Array.prototype.forEach.call(elsTargetBlank, function(el, i){
+      el.setAttribute('rel', 'noopener');
+    });
+</script>
+{{- if eq .Params.layout "contact" -}}
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>	
+{{ end }}
+{{ with .Scratch.Get "script" }}
+	<script src="{{ .Permalink }}"
+		{{- with .Data.Integrity }}
+			integrity="{{ . | safeHTMLAttr }}"
+	        crossorigin="anonymous"
+		{{- end -}}	
+	></script>
+{{ end }}
+{{- if .Site.GoogleAnalytics -}}
+{{- template "_internal/google_analytics_async.html" . -}}
+{{- end -}}

@@ -1,0 +1,21 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $s := newScratch }}
+{{ $s.Set "icon_type" "fas" }}
+{{ with .Get "icon" }}
+	{{ if in (slice "github") .  }}
+		{{ $s.Set "icon_type" "fab" }}
+	{{ end }}
+{{ end }}
+<div class="rp-Notice {{ with .Get "type" }}rp-Notice--{{ . }}{{ end }}">
+	<div class="rp-Notice__head">
+		{{ with .Get "icon" }}
+			<i class="{{ $s.Get "icon_type" }} fa-{{ . }}"></i>&nbsp;
+		{{ end }}{{ with .Get "title" }}
+			{{ . | markdownify }}
+		{{ end }}
+		
+	</div>
+	<div class="rp-Notice__body">
+		{{ .Inner | markdownify }}
+	</div>
+</div>

@@ -1,0 +1,51 @@
+.rp-btt{
+    position: relative;
+    width: 130px;
+    height:130px;
+    opacity:0;
+    transition:clip-path ease-in 150ms, opacity ease-in 150ms;
+    margin: 0 auto 5px auto;
+    opacity: 0.80;
+    cursor: pointer;
+    background-image:url(/images/rp_social_rotate.jpg);
+    background-position:top center;
+    background-size:160px auto;
+    background-position:top -22px center;
+    &:hover{
+        background-image:url(/images/rp_social.jpg);
+        background-position:top -160px center;
+    }
+    .cssmask & {
+        -webkit-clip-path:polygon(50% 10%, 0 100%, 100% 100%);
+        clip-path: polygon(50% 10%, 0 100%, 100% 100%);
+        &:active{
+            -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+        }
+
+    }
+    img{
+        transition: ease-in 150ms;
+        width:100%;
+    }
+    &:after{
+        content:attr(data-content);
+        position: absolute;
+        display: block;
+        bottom:0;
+        text-align: center;
+        width:100%;
+        color:$cBackground;
+        text-shadow:0px 0px 5px $cBlack;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        padding:.5em 0;
+    }
+    &.show{
+        opacity:1;
+    }
+}
+.clip-triangle{
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

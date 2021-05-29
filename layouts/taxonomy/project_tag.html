@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $template := "home"}}
+{{ $limit := 1 }}
+	<h1 class="rp-page-header">#{{ .Title }}</h1>
+	<div class="rp-project-loop">
+	{{ range where .Data.Pages "Section" "project" }}
+		{{ $params := dict "template" $template "limit" $limit "dot" . }}
+	    {{ partial "project/loop.html" $params }}
+	{{ end }}
+	</div>
+
+{{ end }}

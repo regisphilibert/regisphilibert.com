@@ -1,0 +1,17 @@
+{{ define "main" }}
+	<div class="rp-Entry">
+		<div class="rp-Entry__main">
+			<div class="rp-Entry__head">
+				<h1>🗒️ {{ .Title }}</h1>
+			</div>
+			
+		<div class="rp-Entry__content">
+			<ul>
+			{{ range .Pages }}
+				<li>👉 <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+			{{ end }}
+			</ul>
+		</div>
+		</div>
+	</div>
+{{ end }}

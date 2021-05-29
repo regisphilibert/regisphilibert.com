@@ -1,0 +1,24 @@
+<div class="rp-Card">
+	<a href="{{ .Permalink }}" class="rp-Card__body">
+		<div class="rp-Card__head">
+			<div class="rp-Card__title">
+				{{ .Title }}
+			</div>
+			<div class="rp-Card__meta">
+				<div class="rp-Entry__time__small">
+					<time datetime="{{ .Date }}">{{ dateFormat "January 2, 2006" .Lastmod }}</time> 
+				</div>
+				<div class="rp-Entry__tags desktop-block">
+		    		{{ range .Params.tags }}
+						<span class='rp-Tag'>{{ . }}</span>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+		{{ with .Params.description }}
+			<div class="rp-Card__summary">
+				{{ . | truncate 100 }}
+			</div>
+		{{ end }}
+	</a>
+</div>

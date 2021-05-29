@@ -1,0 +1,21 @@
+.wysiwyg-content figure, .rp-Figure{
+	background-color:$cBlack;
+	background-color:#fffcf5;
+	border:1px solid $cHeaderBorder;
+	//color:$cBorder;
+	//color:white;
+	padding:1em;
+	font-size:0.8em;
+	margin-bottom:1em;
+	figcaption{
+		font-family:$ffCode;
+		h4{
+			border-bottom:0;
+			//font-family: $ffAudimat;
+		}
+		p:last-child{
+			margin-bottom:0;
+		}
+	}
+
+}

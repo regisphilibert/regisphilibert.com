@@ -11,18 +11,15 @@
     background-position:top center;
     background-size:160px auto;
     background-position:top -22px center;
+    -webkit-clip-path:polygon(50% 10%, 0 100%, 100% 100%);
+    clip-path: polygon(50% 10%, 0 100%, 100% 100%);
+    &:active{
+        -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+        clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+    }
     &:hover{
         background-image:url(/images/rp_social.jpg);
         background-position:top -160px center;
-    }
-    .cssmask & {
-        -webkit-clip-path:polygon(50% 10%, 0 100%, 100% 100%);
-        clip-path: polygon(50% 10%, 0 100%, 100% 100%);
-        &:active{
-            -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%);
-            clip-path: polygon(50% 50%, 0 100%, 100% 100%);
-        }
-
     }
     img{
         transition: ease-in 150ms;

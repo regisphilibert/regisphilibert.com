@@ -304,16 +304,15 @@ Solution can be to put inside the a tag :
   background-image: url(/images/rp_social_rotate.jpg);
   background-position: top center;
   background-size: 160px auto;
-  background-position: top -22px center; }
+  background-position: top -22px center;
+  -webkit-clip-path: polygon(50% 10%, 0 100%, 100% 100%);
+  clip-path: polygon(50% 10%, 0 100%, 100% 100%); }
+  .rp-btt:active {
+    -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+    clip-path: polygon(50% 50%, 0 100%, 100% 100%); }
   .rp-btt:hover {
     background-image: url(/images/rp_social.jpg);
     background-position: top -160px center; }
-  .cssmask .rp-btt {
-    -webkit-clip-path: polygon(50% 10%, 0 100%, 100% 100%);
-    clip-path: polygon(50% 10%, 0 100%, 100% 100%); }
-    .cssmask .rp-btt:active {
-      -webkit-clip-path: polygon(50% 50%, 0 100%, 100% 100%);
-      clip-path: polygon(50% 50%, 0 100%, 100% 100%); }
   .rp-btt img {
     transition: ease-in 150ms;
     width: 100%; }

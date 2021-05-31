@@ -2,7 +2,7 @@
 	{{ range $.Page.Resources.Match "documents/*" }}
 
 		<li>
-			<a target="_blank" href="{{ .Permalink }}">
+			<a target="_blank" href="{{ .RelPermalink }}">
 				<i class="far fa-file-{{ .Params.icon }}"></i> {{ .Title }} <small>{{ with .Params.ref }}(Ref.{{ . }}) {{ end }}</small>
 			</a>
 		</li>

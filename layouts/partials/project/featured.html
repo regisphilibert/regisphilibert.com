@@ -13,15 +13,15 @@
 	<div>
 	{{ else }}
 	<a 
-		href="{{ .dot.Permalink }}"
+		href="{{ .dot.RelPermalink }}"
 	>
 	{{ end }}
 		<picture class="rp-project-media-img {{ with $featured.Params.border }}bordered{{ end }}">
 			{{ range $width, $size := $.dot.Site.Params.imagesizes }}
 				{{ $image := $featured.Resize (printf "%sx" $width)  }}
-				<source srcset='{{ $image.Permalink}}' media='(max-width: {{ $width }}px)' />
+				<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
 			{{ end }}
-			<img src="{{ $featured.Permalink }}" alt="" />
+			<img src="{{ $featured.RelPermalink }}" alt="" />
 		</picture>
 	{{ if eq .template "single" }}
 	</div>

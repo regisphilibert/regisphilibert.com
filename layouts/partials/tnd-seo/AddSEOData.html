@@ -1,0 +1,23 @@
+{{/* 
+	Add/Edit SEO Scratch Object
+	
+	@author @regisphilibert
+	
+	@access public
+
+  @context Map
+    Page (.Page)
+		Map (.seo)
+		
+ */}}
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+
+{{ with .Page.Params.original }}
+  {{ with .url }}
+    {{ $s.SetInMap "data" "canonical" . }}
+  {{ end }}
+{{ end }}
+
+ {{ return merge .seo ($s.Get "data") }}

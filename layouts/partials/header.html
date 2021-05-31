@@ -1,8 +1,8 @@
 <header class="rp-header">
     {{ partial "language-switch" . }}
     <div class="rp-container">
-        <a href="{{ .Site.Home.Permalink }}" class="rp-brand">
-            {{ with partialCached "tnd-media/Get" "/uploads/images/regisphilibert_logo.svg" }}
+        <a href="{{ .Site.Home.RelPermalink }}" class="rp-brand">
+            {{ with partialCached "tnd-media/Get" (dict "path" "/uploads/images/regisphilibert_logo.svg" "width" 100) }}
             <img class="rp-logo inline-block" src="{{ .RelPermalink }}" alt="Regis Philibert's logo">
             {{ end }}
             <h2 class="rp-baseline">

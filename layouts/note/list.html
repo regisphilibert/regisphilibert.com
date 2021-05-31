@@ -8,7 +8,7 @@
 		<div class="rp-Entry__content">
 			<ul>
 			{{ range .Pages }}
-				<li>👉 <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+				<li>👉 <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 			{{ end }}
 			</ul>
 		</div>

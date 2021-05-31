@@ -3,7 +3,7 @@
 </style>
 {{ with .Scratch.Get "style" }}
 	<link 
-		href="{{ .Permalink }}"
+		href="{{ .RelPermalink }}"
 		rel="stylesheet"
 		{{- with .Data.Integrity }}
 			integrity="{{ . | safeHTMLAttr }}"

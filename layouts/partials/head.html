@@ -6,7 +6,7 @@
     {{ partial "tnd-styles/tags" . }}
     {{ if .IsTranslated }}
       {{ range .Translations }}
-        <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
+        <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .RelPermalink }}"/>
       {{ end}}
     {{ end }}
     {{ if .RSSLink }}

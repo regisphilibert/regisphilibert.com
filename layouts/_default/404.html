@@ -1,0 +1,17 @@
+{{ define "main" }}
+	{{ $april := dict "src" "/uploads/cartoons/april.jpg" "credit" "Tom Toles from the WaPo" "url" "https://www.washingtonpost.com/news/opinions/wp/2017/04/11/donald-trump-does-so-have-a-plan-for-his-foreign-policy/?utm_term=.1fcae583d9f7" }}
+	{{ $images := slice $april }}
+	{{ $selection := index $images 0 }}
+	<div class="rp-404">
+		<div class="rp-Entry__title rp-Entry__title--fat">404</div>
+		<figure>
+			{{ with partialCached "tnd-media/Get" $selection.src $selection.src }}
+				<img src="{{ .RelPermalink }}" alt="">
+			{{ end }}
+
+			<figcaption>
+				<a target="_blank" href="{{ $selection.url }}">{{ $selection.credit }}</a>
+			</figcaption>
+		</figure>
+	</div>
+{{ end }}

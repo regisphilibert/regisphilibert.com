@@ -7,12 +7,18 @@
 		<div class="rp-Entry__content wysiwyg-content">
 			{{ .Content }}
 		</div>
-		
+		{{ with $moreLink := partialCached "func/GetMoreLink" . . }}
+			{{ with .Plateform }}
+				{{ partial "more" $moreLink }}
+			{{ end }}
+		{{ end }}
 		{{ with (where (.Site.RegularPages.Related .) "Type" "post" | first 4) }}
 		{{ partial "post/related" . }}
 		{{ end }}
-
+		{{ if not .Params.disable_comments }}
 		{{ partial "post/comments" . }}
+		{{ end }}
+
 		
 	</article>
 	

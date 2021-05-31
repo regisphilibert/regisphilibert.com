@@ -7,6 +7,11 @@
 		grid-gap:1rem 1.5rem;
 	}
 }
+.rp-home .rp-Cards{
+	@media(min-width: 500px){
+		grid-template-columns:1fr;
+	}
+}
 .rp-Card{
 	font-size: 0.8em;
 	transition: padding-left 150ms;
@@ -16,6 +21,10 @@
 		font-size: 0.8em;
 		height:1.5em;
 		overflow:hidden;
+	}
+	.rp-home & {
+		padding-bottom: .7em;
+		border-bottom: 1px solid $cTurquoise;
 	}
 }
 .rp-Card {

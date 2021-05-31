@@ -6,7 +6,7 @@
 	{{- partial "scratch/body_classes" . -}}
 	{{ $pageType := cond (eq .Layout "contact") "contact" "default" }}
     {{- range .Translations -}}
-    	{{ $.Scratch.Set "translation_url" .Permalink }}
+    	{{ $.Scratch.Set "translation_url" .RelPermalink }}
     {{- end -}}
 	{{- partial "head.html" . -}}
 
@@ -15,11 +15,11 @@
 			<a href="{{ .Site.BaseURL }}">🏠</a>
 			{{ with .Parent }}
 				{{ if ne .Kind "home" }}
-					<a href="{{ .Permalink }}">🗒️</a>
+					<a href="{{ .RelPermalink }}">🗒️</a>
 				{{ end }}	
 			{{ end }}
 		    {{ range .Translations }}
-	            <a href="{{ .Permalink }}" class="no-ajax">{{ .Language.Params.flag }}</a>
+	            <a href="{{ .RelPermalink }}" class="no-ajax">{{ .Language.Params.flag }}</a>
 		    {{ end}}
 		</div>
 		<div class="rp-wrapper">

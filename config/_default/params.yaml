@@ -34,33 +34,33 @@ tnd_styles:
       path: css/critical.scss
       inline: true
   fonts:
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-300
     weight: 300
     style: normal
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-300italic
     weight: 300
     style: italic
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-regular
     weight: 400
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-italic
     weight: 400
     style: italic
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-600
     weight: 600
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-600italic
     weight: 600
     style: italic
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-700
     weight: 700
     style: normal
-  - family: Open
+  - family: Open Sans
     file: fonts/open-sans-v17-latin-700italic
     weight: 700
     style: italic

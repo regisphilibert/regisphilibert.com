@@ -1,0 +1,12 @@
+{{ $url := .RelPermalink }}
+{{ $plateform := "" }}
+{{ with .Params.original }}
+  {{ with .url }}
+    {{ $url = . }}
+  {{ end }}
+  {{ with .plateform }}
+    {{ $plateform = . }}
+  {{ end }}
+{{ end }}
+
+{{ return dict "URL" $url "Plateform" $plateform }}

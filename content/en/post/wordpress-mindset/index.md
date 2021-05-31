@@ -532,7 +532,7 @@ Hugo [menu solution](https://gohugo.io/content-management/menus/#readout) lets y
 
 In short, assuming you have two menus in your site, you assign a given page to a menu this way:
 
-```
+```yaml
 # /content/about.md
 title: About
 menu:
@@ -545,7 +545,7 @@ menu:
 
 If you need to add a non-content url to the `main` menu, that happens in your site config:
 
-```
+```yaml
 # /config.yaml
 menus:
   main:

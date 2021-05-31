@@ -11,7 +11,7 @@
   crossorigin="anonymous"></script>	
 {{ end }}
 {{ with .Scratch.Get "script" }}
-	<script src="{{ .Permalink }}"
+	<script src="{{ .RelPermalink }}"
 		{{- with .Data.Integrity }}
 			integrity="{{ . | safeHTMLAttr }}"
 	        crossorigin="anonymous"

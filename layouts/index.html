@@ -15,7 +15,7 @@
   </div>
   <div class="rp-Entry__content">
     <div class="rp-Cards">
-      {{ range first 4 (partialCached "func/GetPosts" "GetPosts") }}
+      {{ range first 8 (partialCached "func/GetPosts" "GetPosts") }}
         {{ partial "card" . }}
       {{ end }}
     </div>

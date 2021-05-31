@@ -17,20 +17,13 @@
 				{{ .Scratch.Set "link_in_title" true }}
 				{{ partial "post/head.html" . }}
 				
-				<div class="rp-Entry__content wysiwyg-content">
+				<div class="rp-Entry__content wysiwyg-content user-content">
 					{{ if .Params.featured }}
 					<div class="rp-Entry__thumbnail {{ with (eq .Params.featured "small") }}rp-Entry__thumbnail--small{{ end }}">
 						{{ partial "post/featured" . }}
 					</div>
 					{{ end }}
-					{{ if (or (strings.Contains .RawContent "<!--more-->") (not .Description)) }}
-						{{ .Summary }}
-					{{ else }}
-						{{ .Description | markdownify }}
-					{{ end }}
-					<div class="rp-More">
-						<a href="{{ .Permalink }}" class="rp-CTA">Read more&hellip; </a>
-					</div>
+					{{ partial "post/summary" . }}
 				</div>
 			</div>
 		</article>

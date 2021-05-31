@@ -14,6 +14,8 @@ github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2 h1:QyvV5FgRFNX6ZbMkB9uE2b5
 github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2/go.mod h1:6P3SwYL7H/KccxwrB7BDl+wJW2qzaLTnVDf9m+Uj/Uo=
 github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210527194421-36f0282b5b88 h1:35zRgE8sz3yLVu/5Z1NdHxezQ/CrMc1MAsEWWv1e1H4=
 github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210527194421-36f0282b5b88/go.mod h1:5kGUg8NNAfXvsiXl2y910hJEjMkfQbmO1m1vXcehZiA=
+github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210531144828-07e0fa64fece h1:eWcQW0UHE298Gj7h6LFw24Q8Szz61UGsVjJZKi2lqvU=
+github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210531144828-07e0fa64fece/go.mod h1:5kGUg8NNAfXvsiXl2y910hJEjMkfQbmO1m1vXcehZiA=
 github.com/theNewDynamic/hugo-module-tnd-menus v0.0.0-20210322205111-03cfde5da487 h1:TgqRk9N54Jq+6hYvCt/FJKQ3CtxdnlMyYbcyT86ji3o=
 github.com/theNewDynamic/hugo-module-tnd-menus v0.0.0-20210322205111-03cfde5da487/go.mod h1:JS9FfAjzL8RbYx5wfQwqn+BqHpODA/aU8crYZRcAMI4=
 github.com/theNewDynamic/hugo-module-tnd-redirects v1.2.4 h1:UhT2+qGgY0OFqjAd5K71aD/bBN1rNA2iuvRYVK01Z2w=

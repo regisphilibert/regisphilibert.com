@@ -1,7 +1,7 @@
 <div class="rp-Entry__head">
 	<h1 class="rp-Entry__title">
-		{{ if .Scratch.Get "link_in_title" }}
-		<a href="{{ .Permalink }}">{{ .Title }}</a>
+		{{ if and (.Scratch.Get "link_in_title") .RelPermalink }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		{{ else }}
 		{{ .Title }}
 		{{ end}}
@@ -11,8 +11,13 @@
 	{{ end }}
 	<div class="rp-Entry__meta">
 		<div class="rp-Entry__time">
-			{{ if ne .Type  "note"}}
-				<time datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time> 
+			{{ if ne .Type "note"}}
+				<time datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time>
+				{{ with .Params.original }}
+					{{ with .plateform }}
+						for {{ . }}
+					{{ end }}
+				{{ end }}
 			{{ end }}
 			{{ if ne .Lastmod .Date }}
 			<div class="rp-Entry__time__small">

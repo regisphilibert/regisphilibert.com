@@ -6,7 +6,7 @@
 	{{- partial "scratch/body_classes" . -}}
 	{{ $pageType := cond (eq .Layout "contact") "contact" "default" }}
     {{- range .Translations -}}
-    	{{ $.Scratch.Set "translation_url" .Permalink }}
+    	{{ $.Scratch.Set "translation_url" .RelPermalink }}
     {{- end -}}
 	{{- partial "head.html" . -}}
 	{{ if eq .Layout "about" }}

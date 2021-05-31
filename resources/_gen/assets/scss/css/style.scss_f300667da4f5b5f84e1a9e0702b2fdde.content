@@ -1164,6 +1164,7 @@ code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
   .highlight code {
     background-color: transparent;
+    font-family: inherit;
     border: 0;
     font-size: 0.9em;
     padding: 0; }
@@ -1309,6 +1310,10 @@ pre.language-css .token.variable {
     .rp-Cards {
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem 1.5rem; } }
+@media (min-width: 500px) {
+  .rp-home .rp-Cards {
+    grid-template-columns: 1fr; } }
+
 .rp-Card {
   font-size: 0.8em;
   transition: padding-left 150ms;
@@ -1318,6 +1323,9 @@ pre.language-css .token.variable {
     font-size: 0.8em;
     height: 1.5em;
     overflow: hidden; }
+  .rp-home .rp-Card {
+    padding-bottom: .7em;
+    border-bottom: 1px solid #44b6ae; }
 
 .rp-Card:before {
   content: "";

@@ -1,0 +1,11 @@
+{{ $summary := .Description | markdownify }}
+{{ if (or (strings.Contains .RawContent "<!--more-->") (not .Description)) }}
+  {{ $summary = .Summary }}
+{{ end }}
+{{ with .Params.original.url }}
+    {{ $summary = $.Content }}
+{{ end }}
+{{ $summary }}
+{{ with partialCached "func/GetMoreLink" . . }}
+  {{ partial "more" . }}
+{{ end }}

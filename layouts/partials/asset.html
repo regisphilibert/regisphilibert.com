@@ -2,8 +2,8 @@
 {{- $s := newScratch -}}
 {{- with resources.Get .asset -}}
 	{{- if $site.IsServer -}}
-		{{- .Permalink -}}
+		{{- .RelPermalink -}}
 	{{- else }}
-		{{- (. | fingerprint).Permalink -}}
+		{{- (. | fingerprint).RelPermalink -}}
 	{{- end -}}
 {{- end -}}

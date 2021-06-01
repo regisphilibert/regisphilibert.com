@@ -118,12 +118,10 @@ tnd_redirects:
   use_aliases: true
   rules:
   # Following rule for production
-  # - origin: https://that-project.netlify.com/*
-  #   target: https://www.that-project.com/:splat
-  #   code: 301
-  #   force: true
-    - origin: /example-1234
-      target: /example
+  - origin: https://regisphilibert.netlify.app/*
+    target: https://www.regisphilibert.com/:splat
+    code: 301
+    force: true
 
 # ###############
 # TND HEADERS

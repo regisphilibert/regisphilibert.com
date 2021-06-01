@@ -13,7 +13,7 @@ command = "hugo --minify -e cached"
 [context.production]
 
 [context.production.environment]
-HUGO_ENV = "staging"
+HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "hugo --minify -e cached -D -b $DEPLOY_PRIME_URL"

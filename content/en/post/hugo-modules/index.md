@@ -4,6 +4,10 @@ date: 2020-08-30T17:28:14-04:00
 disable_comments: true
 _build:
   render: never
+tags:
+ - Hugo
+ - Modules
+ - Git
 original: 
   url: https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
   plateform: theNewDynamic

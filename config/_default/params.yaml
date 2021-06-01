@@ -35,6 +35,10 @@ tnd_styles:
       path: css/critical.scss
       inline: true
   fonts:
+  - family: AUDimat
+    file: fonts/audimat-regular
+    weight: 400
+    style: normal
   - family: Open Sans
     file: fonts/open-sans-v17-latin-300
     weight: 300

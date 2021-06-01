@@ -1,8 +1,8 @@
 # Config Base
 # This is where root config key goes.
 # ###################################
-title: 'Regis Philibert'
-baseURL: 'https://www.regisphilibert.com'
+title: Regis Philibert
+baseURL: https://www.regisphilibert.com
 DefaultContentLanguage: en
 enableRobotsTXT: true
 disableAliases: true

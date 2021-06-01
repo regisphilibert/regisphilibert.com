@@ -21,6 +21,7 @@ tnd_seo:
   jsonld: true
   enable_follow: true
   disable_title: false
+  default_image: /uploads/images/rp_share.jpg
 
 # ###############
 # TND STYLES

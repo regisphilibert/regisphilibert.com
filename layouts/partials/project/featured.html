@@ -21,7 +21,7 @@
 				{{ $image := $featured.Resize (printf "%sx" $width)  }}
 				<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
 			{{ end }}
-			<img src="{{ $featured.RelPermalink }}" alt="" />
+			<img width="{{ $featured.Width }}" height="{{ $featured.Height }}" src="{{ $featured.RelPermalink }}" alt="" />
 		</picture>
 	{{ if eq .template "single" }}
 	</div>

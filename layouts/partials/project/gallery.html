@@ -6,7 +6,7 @@
 			{{ $image := $file.Resize (printf "%sx" $width) }}
 			<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
 		{{ end }}
-		<img src="{{ .RelPermalink }}" alt="" />
+		<img width="{{ .Width }}" height="{{ .Height }}" src="{{ .RelPermalink }}" alt="" />
 	</div>
 	{{ end }}
 {{ end }}

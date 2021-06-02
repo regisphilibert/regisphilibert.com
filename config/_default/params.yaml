@@ -78,6 +78,9 @@ tnd_scripts:
   scripts:
     - name: main
       path: /js/index.js
+    - name: legacy
+      path: /js/legacy.js
+      format: cjs
 
 # ###############
 # TND MEDIA

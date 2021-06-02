@@ -16,7 +16,7 @@ menu:
 
 I build websites from but also [**for**](/project_tags/mtl/) Montréal 🇨🇦.
 
-My name is mentioned in the <span class="desktop-inline">sidebar (twice)</span><span class="mobile-inline tablet-inline">header (biggly)</span>, I've been in the business since 2010 and I have this [old thing](https://2011.regisphilibert.com/) to prove it.
+My name is mentioned in the <span class="desktop-inline">sidebar (twice)</span><span class="mobile-inline tablet-inline">header (biggly)</span>, I've been in the business since 2010.
 
 I'm big on emojis and it's not a phase mom! 🤷🏻
 

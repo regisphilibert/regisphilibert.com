@@ -1,4 +1,3 @@
-import "./main.js"
 import "./toConvert.js"
 import "./lazysizes.js"
 import "./quicklink.js"

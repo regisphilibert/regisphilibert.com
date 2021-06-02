@@ -4,6 +4,7 @@
     <meta name="environment" value="{{ partialCached "tnd-env/Get" "Get" }}">
     {{ partial "tnd-seo/tags" . }}
     {{ partial "tnd-styles/tags" . }}
+    {{ partial "tnd-scripts/tags" (slice "main" "legacy") }}
     {{ if .IsTranslated }}
       {{ range .Translations }}
         <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .RelPermalink }}"/>

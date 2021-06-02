@@ -3,7 +3,7 @@
     <div class="rp-container">
         <a href="{{ .Site.Home.RelPermalink }}" class="rp-brand">
             {{ with partialCached "tnd-media/Get" (dict "path" "/uploads/images/regisphilibert_logo.svg" "width" 100) }}
-            <img class="rp-logo inline-block" src="{{ .RelPermalink }}" alt="Regis Philibert's logo">
+            <img class="rp-logo inline-block" width="300" height="52" src="{{ .RelPermalink }}" alt="Regis Philibert's logo">
             {{ end }}
             <h2 class="rp-baseline">
                 {{ i18n "dev_title" }}

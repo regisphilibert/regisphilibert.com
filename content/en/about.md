@@ -24,7 +24,7 @@ I am __front end__ first and foremost, the view is what I love best. That being 
 
 My most outstanding works are listed [here](/).
 
-I'm on <span class="black-color">[__GitHub__](https://github.com/regisphilibert)</span>, <span class="twitter-color">[🐦__Twitter__](https://twitter.com/regisphilibert)</span> and <span class="black-color">[__LinkedIn__🚾](https://www.linkedin.com/in/regisphilibert)</span>[^2].
+I'm on <span class="black-color font-semibold">[GitHub](https://github.com/regisphilibert)</span>, <span class="twitter-color font-semibold">[🐦Twitter](https://twitter.com/regisphilibert)</span> and <span class="black-color font-semibold">[LinkedIn🚾](https://www.linkedin.com/in/regisphilibert)</span>[^2].
 
 Oh and there's a skill grid down [there ⏬](#skill-grid).
 

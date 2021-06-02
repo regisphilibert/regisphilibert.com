@@ -116,7 +116,9 @@
             margin-bottom:30px;
         }
     }
-
+    strong{
+        @apply font-semibold;
+    }
     del{
         text-decoration: none;
         position: relative;

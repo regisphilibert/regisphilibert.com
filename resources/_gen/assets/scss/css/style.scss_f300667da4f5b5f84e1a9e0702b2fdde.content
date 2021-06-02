@@ -433,6 +433,9 @@ Solution can be to put inside the a tag :
     margin-left: 30px;
     margin-bottom: 30px; }
 
+.wysiwyg-content strong, .user-content strong {
+  @apply font-semibold; }
+
 .wysiwyg-content del, .user-content del {
   text-decoration: none;
   position: relative;

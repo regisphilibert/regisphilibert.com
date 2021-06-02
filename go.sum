@@ -30,5 +30,7 @@ github.com/theNewDynamic/hugo-module-tnd-styles v0.7.4 h1:W78sNF3D+vgXbyv0zkaL/0
 github.com/theNewDynamic/hugo-module-tnd-styles v0.7.4/go.mod h1:Ih6Fi3sn/qasVNDN3wXpO5NDH16G1o7QeY/EoKfxGcI=
 github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210529144451-be66ed7b7fa8 h1:Km108tVMacOa9hjkhd8FCi36hKr0N7fZA36Dd8tpTSs=
 github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210529144451-be66ed7b7fa8/go.mod h1:Ih6Fi3sn/qasVNDN3wXpO5NDH16G1o7QeY/EoKfxGcI=
+github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210602214715-717abab57eaf h1:cEy6LxZBWYS8OhrWwjjdS9NHr+gQ+wYJBPwk7oXsawc=
+github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210602214715-717abab57eaf/go.mod h1:Ih6Fi3sn/qasVNDN3wXpO5NDH16G1o7QeY/EoKfxGcI=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20201216162006-4a63841356ad h1:i1gIGdHpTX938ekLeI5DPVt4eporyBwMBIZtgv7dAsw=
 github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20201216162006-4a63841356ad/go.mod h1:fuXjv9Nbt2hi6oaOVAqhPRrS4hL9uYcwroo6V/Mw7Uk=

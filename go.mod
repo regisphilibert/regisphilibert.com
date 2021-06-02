@@ -15,6 +15,6 @@ require (
 	github.com/theNewDynamic/hugo-module-tnd-scripts v0.0.0-20210512182152-9e0809896a22 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-seo v0.1.9 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-socials v0.1.5 // indirect
-	github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210529144451-be66ed7b7fa8 // indirect
+	github.com/theNewDynamic/hugo-module-tnd-styles v0.7.5-0.20210602214715-717abab57eaf // indirect
 	github.com/theNewDynamic/hugo-module-tnd-tags v0.0.0-20201216162006-4a63841356ad // indirect
 )

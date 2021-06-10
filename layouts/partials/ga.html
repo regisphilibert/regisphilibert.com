@@ -1,0 +1,18 @@
+{{ $branch := "development" }}
+{{ with getenv "BRANCH" }}
+  {{ $branch = . }}
+{{ end }}
+{{ with site.GoogleAnalytics }}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ . }}', {
+      'custom_map': {'dimension1': 'Branch'}
+    });
+    gtag('event', 'Branch_dimension', {'Branch': '{{ $branch }}'});
+  </script>
+{{ end }}

@@ -22,3 +22,5 @@ jobs:
         allow_ff: false
         user_name: GitHub Split Merge Action
         user_email: login@regisphilibert.com
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_API_TOKEN }}

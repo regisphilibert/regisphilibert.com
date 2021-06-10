@@ -20,6 +20,7 @@ jobs:
         stable_branch: 'main'
         development_branch: 'blog-summary'
         allow_ff: false
+        allow_forks: true
         user_name: GitHub Split Merge Action
         user_email: login@regisphilibert.com
       env:

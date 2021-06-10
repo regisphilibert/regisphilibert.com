@@ -23,4 +23,4 @@ HUGO_ENV = "staging"
 [context.branch-deploy]
 command = "hugo --minify -e cached -b $DEPLOY_URL"
 [context.branch-deploy.environment]
-HUGO_ENV = "staging"
+HUGO_ENV = "production"

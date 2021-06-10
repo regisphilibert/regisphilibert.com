@@ -42,3 +42,6 @@
 
 - id: recent_posts
   translation: "最近の記事"
+
+- id: latest_post
+  translation: "最近の記事"

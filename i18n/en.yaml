@@ -50,3 +50,6 @@
 
 - id: recent_posts
   translation: "Recent Posts"
+
+- id: latest_post
+  translation: "Latest Post"

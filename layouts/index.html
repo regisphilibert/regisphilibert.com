@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="rp-Entry" style="padding-top:3rem; font-size:1.2rem;">
-  <div class="rp-Entry__main">
+<div class="rp-Entry" style="font-size:1.2rem;">
+  <div class="rp-Entry__main pb-0">
     <div class="rp-page-header">
       <h1>{{ .Title }}</h1>
     </div>
@@ -9,16 +9,28 @@
     </div>
   </div>
 </div>
-<div class="rp-Entry__main">
+<div class="rp-Entry__main pt-0">
   <div class="wysiwyg-content">
-    <h2 style="margin-top: 0;">{{ i18n "recent_posts" }}</h2>
+    <h2 style="margin-top: 0;">{{ i18n "latest_post" }}</h2>
   </div>
   <div class="rp-Entry__content">
-    <div class="rp-Cards">
-      {{ range first 8 (partialCached "func/GetPosts" "GetPosts") }}
-        {{ partial "card" . }}
+      {{ range first 1 (partialCached "func/GetPosts" "GetPosts") }}
+      <article class="rp-Entry rp-Entry--in-loop">
+        <div class="rp-Entry__main">
+          {{ .Scratch.Set "link_in_title" true }}
+          {{ partial "post/head.html" . }}
+          
+          <div class="rp-Entry__content wysiwyg-content user-content">
+            {{ if .Params.featured }}
+            <div class="rp-Entry__thumbnail {{ with (eq .Params.featured "small") }}rp-Entry__thumbnail--small{{ end }}">
+              {{ partial "post/featured" . }}
+            </div>
+            {{ end }}
+            {{ partial "post/summary" . }}
+          </div>
+        </div>
+      </article>
       {{ end }}
-    </div>
   </div>
 </div>
 {{ end }}

@@ -424,11 +424,11 @@ Solution can be to put inside the a tag :
 
 .wysiwyg-content img, .wysiwyg-content img[style], .user-content img, .user-content img[style] {
   max-width: 100% !important; }
-  .wysiwyg-content img.alignleft, .wysiwyg-content img[style].alignleft, .user-content img.alignleft, .user-content img[style].alignleft {
+  .wysiwyg-content img.alignleft, .wysiwyg-content img.alignleft[style], .user-content img.alignleft, .user-content img.alignleft[style] {
     float: left;
     margin-right: 30px;
     margin-bottom: 30px; }
-  .wysiwyg-content img.alignright, .wysiwyg-content img[style].alignright, .user-content img.alignright, .user-content img[style].alignright {
+  .wysiwyg-content img.alignright, .wysiwyg-content img.alignright[style], .user-content img.alignright, .user-content img.alignright[style] {
     float: right;
     margin-left: 30px;
     margin-bottom: 30px; }

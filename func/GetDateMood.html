@@ -15,30 +15,54 @@
 {{ end }}
 {{ $match := dict }}
 {{ $match_exact := dict }}
+{{ $match_yearmonth := dict }}
 {{ $match_anniversary := dict }}
 {{ $match_month := dict }}
 {{ $match_year := dict }}
-{{ range $mood := where site.Sites.First.RegularPages "Type" "moods" }}
-  {{ $year := 0 }}
-  {{ $month := 0 }}
-  {{ $day := 0 }}
-  {{ with .Params.year }}
-    {{ $year = . }}
+{{ $moods := where site.Sites.First.RegularPages "Type" "moods" }}
+
+{{/* Exact */}}
+{{ with where $moods ".Params.year" $date.Year }}
+  {{ with where . ".Params.month" $date.Month }}
+    {{ with where . ".Params.day" $date.Day }}
+      {{ $match_exact = index . 0 }}
+    {{ end }}
   {{ end }}
-  {{ with .Params.month }}
-    {{ $month = . }}
+{{ end }}
+
+{{/* Year Month */}}
+{{ with where $moods ".Params.year" $date.Year }}
+  {{ with where . ".Params.month" $date.Month }}
+    {{ with where . ".Params.day" nil }}
+      {{ $match_yearmonth = index . 0 }}
+    {{ end }}
   {{ end }}
-  {{ with .Params.day }}
-    {{ $day = . }}
+{{ end }}
+
+{{/* Anniversary */}}
+{{ with where $moods ".Params.year" nil }}
+  {{ with where . ".Params.month" $date.Month }}
+    {{ with where . ".Params.day" $date.Day }}
+      {{ $match_anniversary = index . 0 }}
+    {{ end }}
   {{ end }}
-  {{ if and (eq $day $date.Day) (eq $month $date.Month) (eq $year $date.Year) }}
-    {{ $match_exact = $mood }}
-  {{ else if and (eq $day $date.Day) (eq $month $date.Month) }}
-    {{ $match_anniversary = $mood }}
-  {{ else if eq $month $date.Month }}
-    {{ $match_month = $mood }}
-  {{ else if eq $year $date.Year }}
-    {{ $match_year = $mood }}
+{{ end }}
+
+{{/* Month */}}
+{{ with where $moods ".Params.year" nil }}
+  {{ with where . ".Params.month" $date.Month }}
+    {{ with where . ".Params.day" nil }}
+      {{ $match_month = index . 0 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Year */}}
+{{ with where $moods ".Params.year" $date.Year }}
+  {{ with where . ".Params.month" nil }}
+    {{ with where . ".Params.day" nil }}
+      {{ $match_year = index . 0 }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -46,6 +70,9 @@
   {{ $match = . }}
 {{ end }}
 {{ with $match_month }}
+  {{ $match = . }}
+{{ end }}
+{{ with $match_yearmonth }}
   {{ $match = . }}
 {{ end }}
 {{ with $match_anniversary }}

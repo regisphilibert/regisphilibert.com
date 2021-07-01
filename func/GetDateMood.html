@@ -1,0 +1,56 @@
+{{/*
+  GetDateMood
+  Retrieve a mood page based on the current date. If exact date, or if anniverary or if month, or if year.
+
+  @author @regisphilibert
+
+  @context Any (.)
+
+  @returns Page
+
+*/}}
+{{ $date := now }}
+
+{{ $match := dict }}
+{{ $match_exact := dict }}
+{{ $match_anniversary := dict }}
+{{ $match_month := dict }}
+{{ $match_year := dict }}
+{{ range $mood := where site.Sites.First.RegularPages "Type" "moods" }}
+  {{ $year := 0 }}
+  {{ $month := 0 }}
+  {{ $day := 0 }}
+  {{ with .Params.year }}
+    {{ $year = . }}
+  {{ end }}
+  {{ with .Params.month }}
+    {{ $month = . }}
+  {{ end }}
+  {{ with .Params.day }}
+    {{ $day = . }}
+  {{ end }}
+  {{ if and (eq $day $date.Day) (eq $month $date.Month) (eq $year $date.Year) }}
+    {{ $match_exact = $mood }}
+  {{ else if and (eq $day $date.Day) (eq $month $date.Month) }}
+    {{ $match_anniversary = $mood }}
+  {{ else if eq $month $date.Month }}
+    {{ $match_month = $mood }}
+  {{ else if eq $year $date.Year }}
+    {{ $match_year = $mood }}
+  {{ end }}
+{{ end }}
+
+{{ with $match_year }}
+  {{ $match = . }}
+{{ end }}
+{{ with $match_month }}
+  {{ $match = . }}
+{{ end }}
+{{ with $match_anniversary }}
+  {{ $match = . }}
+{{ end }}
+{{ with $match_exact }}
+  {{ $match = . }}
+{{ end }}
+
+{{ return $match }}

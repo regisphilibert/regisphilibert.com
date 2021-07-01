@@ -1,0 +1,7 @@
+{{ with $mood := partialCached "func/GetDateMood" "GetDateMood" }}
+  {{ with .Params.more_url }}
+      <a href="{{ . }}" title="{{ $mood.Title }}" target="_blank" class="rp-header__emoji"{{ with $mood.Params.style }} style="{{ . | safeCSS }}" {{ end }}>{{ $mood.Params.emoji }}</a>
+  {{ else }}
+      <span title="{{ $mood.Title }}" class="rp-header__emoji"{{ with $mood.Params.style }} style="{{ . | safeCSS }}" {{ end }}>{{ $mood.Params.emoji }}</span>
+  {{ end }}
+{{ end }}

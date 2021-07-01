@@ -10,7 +10,9 @@
 
 */}}
 {{ $date := now }}
-
+{{ if eq (printf "%#T" .) "time.Time" }}
+  {{ $date = . }}
+{{ end }}
 {{ $match := dict }}
 {{ $match_exact := dict }}
 {{ $match_anniversary := dict }}

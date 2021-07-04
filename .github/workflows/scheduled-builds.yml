@@ -1,0 +1,12 @@
+name: 'Scheduled Builds'
+on:
+  schedule:
+  # Run every day at midnight
+  - cron: '0 0 * * *'
+jobs:
+  build:
+    name: Trigger build of branch main from Netlify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Netlify Webhook CURL
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK_URL }}

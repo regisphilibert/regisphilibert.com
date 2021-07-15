@@ -1,0 +1,25 @@
+{{ $months := slice }}
+{{ $month_index := 1 }}
+{{ $start := time "2021-01-01" }}
+{{ $day := $start }}
+{{ $days_in_month := slice }}
+{{ range seq 1 365 }}
+  {{ if gt . 1 }}
+    {{ $day = $day.AddDate 0 0 1 }}
+  {{ end }}
+  {{ if ne $month_index $day.Month }}
+    {{ $months = $months | append (
+      dict 
+      "name" (($day.AddDate 0 0 -1).Format "January")
+      "days" $days_in_month
+    ) }}
+    {{ $month_index = $day.Month }}
+    {{ $days_in_month = slice }}
+  {{ end }}
+  {{ $days_in_month = $days_in_month | append (dict 
+    "day" $day
+    "mood" (partialCached "func/GetDateMood" $day $day)
+    ) }}
+{{ end }}
+
+{{ return $months }}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+  {{ range partialCached "func/GetYearMoods" "GetYearMoods" }}
+    <div class="my-8">
+      <div class="text-3xl font-bold">{{ .name }}</div>
+    <div class="grid grid-cols-7">
+      {{ range .days }}
+      <div class="h-28 border p-4 text-center text-sm">
+        <div class="mb-4 text-turquoise">{{ .day.Format "02" }}</div>
+        {{ with .mood }}
+          {{ with .Params.emoji }}
+          <div class="text-4xl">
+            {{ . }}
+          </div>
+          {{ end }}
+
+        {{ end }}
+      </div>
+    {{ end }}
+    </div>
+    
+    </div>
+  {{ end }}
+
+{{ end }}

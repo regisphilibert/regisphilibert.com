@@ -2,7 +2,7 @@ name: 'Scheduled Builds'
 on:
   schedule:
   # Run every day at midnight
-  - cron: '0 0 * * *'
+  - cron: '0 4 * * *'
 jobs:
   build:
     name: Trigger build of branch main from Netlify

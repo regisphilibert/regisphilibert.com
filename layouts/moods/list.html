@@ -4,11 +4,11 @@
   </div>
   {{ range partialCached "func/GetYearMoods" "GetYearMoods" }}
     <div class="my-12">
-      <div class="text-2xl font-bold mb-6">{{ .name }}</div>
-    <div class="grid grid-cols-7">
+      <div class="text-2xl font-bold mb-6 border-b border-turquoise pb-2">{{ .name }}</div>
+    <div class="grid grid-cols-7 gap-1">
       {{ range .days }}
-      <div class="h-28 border p-4 text-center text-sm">
-        <div class="mb-4 text-turquoise">{{ .day.Format "02" }}</div>
+      <div class="h-28 bg-near-white border border-turquoise p-4 text-center text-sm">
+        <div class="mb-4 text-turquoise">{{ .day.Format "2" }}</div>
         {{ with $mood := .mood }}
           {{ with .Params.emoji }}
           <div title="{{ $mood.Title }}" class="text-4xl">

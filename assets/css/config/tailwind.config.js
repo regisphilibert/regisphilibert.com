@@ -6,6 +6,7 @@ module.exports = {
   purge: require('./purge.config.js'),
   theme: {
     extend: {
+      colors: require('./colors.config.js'),
       spacing: {
         '4m': '1em'
       }

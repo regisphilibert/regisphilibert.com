@@ -1,25 +1,55 @@
+{{/*
+  GetYearMoods
+  Retrieves every days's mood of the current year grouped by month
+
+  @author @regisphilibert
+
+  @context Any (.)
+
+  @access private
+
+  @returns Slice
+        - String (.name)
+          Slice of Maps (.days)
+            Time (.day)
+            Page (.mood)
+
+  @uses
+     - partial func/GetDateMood
+
+*/}}
 {{ $months := slice }}
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
 {{ $month_index := 1 }}
 {{ $start := time "2021-01-01" }}
 {{ $day := $start }}
-{{ $days_in_month := slice }}
+{{ $days := slice }}
+{{ $month_key := "" }}
+{{ $month_keys := slice }}
 {{ range seq 1 365 }}
   {{ if gt . 1 }}
     {{ $day = $day.AddDate 0 0 1 }}
   {{ end }}
-  {{ if ne $month_index $day.Month }}
-    {{ $months = $months | append (
-      dict 
-      "name" (($day.AddDate 0 0 -1).Format "January")
-      "days" $days_in_month
-    ) }}
-    {{ $month_index = $day.Month }}
-    {{ $days_in_month = slice }}
+  {{ if eq $day.Day 1 }}
+    {{ $month_key = $day.Format "January" }}
+    {{ $month_keys = $month_keys | append $month_key }}
   {{ end }}
-  {{ $days_in_month = $days_in_month | append (dict 
+  {{ $days = $days | append (dict 
     "day" $day
+    "month" $month_key
     "mood" (partialCached "func/GetDateMood" $day $day)
+  ) }}
+{{ end }}
+
+{{ range $key := $month_keys }}
+  {{ with where $days "month" $key }}
+    {{ $months = $months | append (dict
+      "name" $key
+      "days" .
     ) }}
+  {{ end }}
 {{ end }}
 
 {{ return $months }}

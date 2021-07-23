@@ -1,5 +1,6 @@
 # regisphibert.com
 
-Built witn love
-
-This will be public again...
+Test mood date: 
+```
+$ HUGOxPARAMSxTIME=2021-10-06 hugo serve
+```

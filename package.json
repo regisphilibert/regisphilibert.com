@@ -25,7 +25,7 @@
  },
  "hugo": {
   "extended": "true",
-  "version": "0.83.1"
+  "version": "0.86.1"
  },
  "keywords": [
   "template"

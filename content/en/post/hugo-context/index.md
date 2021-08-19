@@ -258,7 +258,7 @@ Elementary! 🕵️‍♂️
 That dot becomes super friendly and convenient once you know how to juggle with it! And to prove it, I leave you with a comparison between two code blocks.
 
 The first shows how readable and easily maintainable Go Template code is since the context can happily shift from one dot to another. 
-The one on the right, attempts to show what your code would look like if the context could did not shift. 
+The one on the right, attempts to show what your code would look like if the context did not shift. 
 
 __Shifting Context VS Unshifting Context__
 

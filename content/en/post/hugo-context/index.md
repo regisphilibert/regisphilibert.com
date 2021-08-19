@@ -244,11 +244,10 @@ And because this `$character` variable is only available as this `with`'s contex
 
 will print:
 
-```
+```html
 Sherlock Holmes is living in London
-
 Hugo Baskerville was living in Devonshire
-``` 
+```
 
 For what it's worth, and only if you don't need the template file's root context in there, you could even use `$` just like Hugo itself!
 

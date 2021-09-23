@@ -1,8 +1,4 @@
 @charset "UTF-8";
-@import url(/Users/regisphilibert/Boulot/pro/regisphilibert.new/assets/css/tailwind/utilities.css);
-.rp-main > * {
-  opacity: 1; }
-
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -19,6 +15,9 @@ html {
 
 figcaption {
   text-align: left; }
+
+img {
+  height: auto; }
 
 /* ==========================================================================
    Ajax View Mechanism
@@ -247,6 +246,12 @@ Solution can be to put inside the a tag :
 
 .rp-input[disabled] {
   opacity: 0.5; }
+
+.grid-square {
+  display: grid;
+  margin: 2rem 0;
+  gap: .25rem;
+  grid-template-columns: repeat(7, 1fr); }
 
 .rp-project {
   display: grid;
@@ -681,6 +686,15 @@ Solution can be to put inside the a tag :
     max-width: 30%;
     margin-right: 1em; } }
 
+.rp-Heading {
+  border-bottom: 1px solid #44b6ae;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-bottom: .5rem;
+  margin-top: 1.5em;
+  margin-bottom: 1em; }
+
 .rp-Stats {
   margin-bottom: 0.5em; }
 
@@ -983,6 +997,25 @@ Solution can be to put inside the a tag :
     color: black; }
   .rp-More .rp-CTA:hover:after {
     right: -5%; }
+
+.rp-Mood {
+  background-color: #fffcf5;
+  border: 1px solid #44b6ae;
+  padding: .25rem;
+  text-align: center;
+  font-size: .7rem;
+  color: #44b6ae; }
+
+.rp-Mood__emoji {
+  font-size: 2.25rem;
+  line-height: 2.5rem; }
+
+@media (min-width: 768px) {
+  .rp-Mood {
+    padding: 1rem;
+    min-height: 7rem; }
+  .rp-Mood__text {
+    margin-bottom: 1rem; } }
 
 .rp-Loop .rp-Entry__main {
   padding: 20px 0; }

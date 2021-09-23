@@ -1,0 +1,6 @@
+styles:
+- name: main
+  path: css/style.scss
+- name: critical
+  path: css/critical.scss
+  internal: true

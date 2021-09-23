@@ -2,7 +2,7 @@
 	<div class="wysiwyg-content">
 		<h2>Comments</h2>
 	</div>
-	{{ if partialCached "tnd-env/IsProduction" "IsProduction" }}
+	{{ if partialCached "huge/env/IsProduction" "IsProduction" }}
 	{{ template "_internal/disqus.html" . }}
 	{{ else }}
 		<img src="{{ .Site.BaseURL }}comments.png" alt="">

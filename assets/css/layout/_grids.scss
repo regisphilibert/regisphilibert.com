@@ -1,0 +1,6 @@
+.grid-square{
+  display: grid;
+  margin: 2rem 0;
+  gap: .25rem;
+  grid-template-columns: repeat(7, 1fr);
+}

@@ -1,0 +1,22 @@
+.rp-Mood{
+  //md:h-28 bg-near-white border border-turquoise py-1 md:p-4 text-center text-sm
+  background-color: $cNearWhite;
+  border: 1px solid $cTurquoise;
+  padding: .25rem;
+  text-align: center;
+  font-size: .7rem;
+  color: $cTurquoise;
+}
+.rp-Mood__emoji{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+@media (min-width:768px) {
+  .rp-Mood{
+    padding: 1rem;
+    min-height: 7rem;
+  }
+  .rp-Mood__text{
+    margin-bottom: 1rem;
+  }
+}

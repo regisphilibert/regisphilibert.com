@@ -10,6 +10,8 @@ github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4 h1:ZmHKrcGc62SMZkXERQL4c
 github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4/go.mod h1:L1vGtRuZCVVcfFHnLokvtQ9hlsfN/jiUem8O17VYeZo=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.4 h1:xz8NrAJpjvdfygjpa/HZvG+RL7Jox5nXaUizOLz+mxg=
 github.com/theNewDynamic/hugo-module-tnd-icons v0.1.4/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.7 h1:1zV9krMjEOnEUB1iPpHnZ/Rk+FBPd79cWUdd/0abJrs=
+github.com/theNewDynamic/hugo-module-tnd-icons v0.1.7/go.mod h1:5P8x9n4dAq+JChj5o0nUsF5G3ucNQglFoeAn5c1Me9A=
 github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2 h1:QyvV5FgRFNX6ZbMkB9uE2b5lnoCzVWlWSfM+ic1fYGc=
 github.com/theNewDynamic/hugo-module-tnd-imgix v0.2.2/go.mod h1:6P3SwYL7H/KccxwrB7BDl+wJW2qzaLTnVDf9m+Uj/Uo=
 github.com/theNewDynamic/hugo-module-tnd-media v0.0.0-20210527194421-36f0282b5b88 h1:35zRgE8sz3yLVu/5Z1NdHxezQ/CrMc1MAsEWWv1e1H4=

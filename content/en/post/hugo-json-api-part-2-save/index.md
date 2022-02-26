@@ -30,11 +30,11 @@ At the moment our API can look up specific items, but can’t look at them in re
 
 Something else we’ll have to consider is that currently our URLs look very 2005! We’ll look into Custom Media Types to dynamically manage URL rewriting rules as well using Query Parameters in order to end up with something like this:  `school.api/players?team=sly-turtles`.
 
-{{% tip %}}
+{{% notice %}}
 
 Missed the first part? Read [Build a JSON API With Hugo's Custom Output Formats](https://forestry.io/blog/build-a-json-api-with-hugo/)
 
-{{% /tip %}}
+{{% /notice %}}
 
 # 1 Linking Models With Relationships
 
@@ -261,9 +261,9 @@ In order to create URL rewrites, we need to be able to modify our webserver conf
 
 Fortunately, Netlify gives us the serverless power we are looking for and also allows us to rewrite URLs. To handle these rewrites, Netlify looks for a file called `_redirects` in the root of our website.
 
-{{% tip %}}
+{{% notice %}}
 For those of you not familiar with Netlify, the Hugo website has a great start up guide on [hosting your Hugo site with Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/).
-{{% /tip %}}
+{{% /notice %}}
 
 ### 3.1 Getting rid of _index.json_
 
@@ -377,9 +377,9 @@ The `$key` is the pluralized name of our taxonomy. Because we can only pass one 
 
 and not `/players/?sports=football`.
 
-{{% tip %}}
+{{% notice %}}
 Those`-`attached to the opening of our`range`and`end` curly braces is to make sure Hugo does not add too many line breaks.
-{{% /tip %}}
+{{% /notice %}}
 
 Now, from your Netlify hosted website, you can access the list of players playing football with
 

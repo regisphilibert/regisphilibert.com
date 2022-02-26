@@ -12,7 +12,7 @@
 				{{ partial "more" $moreLink }}
 			{{ end }}
 		{{ end }}
-		{{ with (where (.Site.RegularPages.Related .) "Type" "post" | first 4) }}
+		{{ with (where (site.RegularPages.Related .) "Type" "post" | first 4) }}
 		{{ partial "post/related" . }}
 		{{ end }}
 		{{ if not .Params.disable_comments }}

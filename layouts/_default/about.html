@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</div>
-	{{ $data := index .Site.Data .Site.Language.Lang }}
+	{{ $data := index site.Data site.Language.Lang }}
 	{{ $no_guess := slice "🤡" }}
 	{{ if $data.badges }}
 		<div class="user-content" style="cursor:pointer;">

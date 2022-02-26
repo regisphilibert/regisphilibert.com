@@ -5,7 +5,7 @@
 	<div class="rp-404">
 		<div class="rp-Entry__title rp-Entry__title--fat">404</div>
 		<figure>
-			{{ with partialCached "tnd-media/Get" $selection.src $selection.src }}
+			{{ with partialCached "huge/media/Get" $selection.src $selection.src }}
 				<img src="{{ .RelPermalink }}" alt="">
 			{{ end }}
 

@@ -4,7 +4,7 @@
 			<div class="rp-Entry__head">
 					<h1 class="rp-contact__title" data-success-message='{{ i18n "contact_thanks" }} (๑˃̵ᴗ˂̵)و'>{{ .Title }}</h1>
 						<div class="rp-Socials">
-							{{ with .Site.Data.socials }}
+							{{ with site.Data.socials }}
 								{{ range . }}
 									{{ partial "social" . }}
 								{{end}}

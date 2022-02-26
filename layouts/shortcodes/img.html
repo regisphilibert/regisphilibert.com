@@ -1,11 +1,11 @@
 {{ $img := $.Page.Resources.GetMatch (.Get "name") }}
 <figure>
 	<picture>
-		{{ range $width, $size := $.Site.Params.imagesizes }}
+		{{ range $width, $size := site.Params.imagesizes }}
 			{{ $image := $img.Resize (printf "%sx" $width)  }}
 			<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
 		{{ end }}
-		<img src="{{ $img.RelPermalink }}" {{ with .Get "title" }} alt="{{ . }}"{{ end }} />	
+		<img src="{{ $img.RelPermalink }}" {{ with .Get "title" }} alt="{{ . }}"{{ end }} />	
 	</picture>
 	{{ if or (.Get "title") (.Get "caption") }}
 	<figcaption>

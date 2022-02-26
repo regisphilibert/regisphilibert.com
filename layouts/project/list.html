@@ -3,7 +3,7 @@
 {{ $limit := 1 }}
 	<div class="rp-project-loop">
 	{{ range .Params.projects }}
-		{{ with $.Site.GetPage (printf "/project/%s" .) }}
+		{{ with site.GetPage (printf "/project/%s" .) }}
 			{{ $params := dict "template" $template "limit" $limit "dot" . }}
 		    {{ partial "project/loop.html" $params }}	
 		{{ end }}

@@ -4,7 +4,7 @@
 {{- .Scratch.Set "script" (resources.Get "js/main.js") -}}
 {{- end -}}
 {{- .Scratch.Set "modernizr" (resources.Get "js/modernizr.js") -}}
-{{ if .Site.IsServer }}
+{{ if site.IsServer }}
     {{ .Scratch.Set "style" (resources.Get "sass/main.scss" | toCSS "style/main.css" ) -}}
 {{- else -}}
 	{{ .Scratch.Set "style" (resources.Get "sass/main.scss" | toCSS "style/main.css" | minify | fingerprint ) }}

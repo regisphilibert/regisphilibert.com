@@ -3,6 +3,18 @@
 # https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
 # ################################
 mounts:
+  - source: content/en
+    target: content
+    lang: en
+  - source: content/fr
+    target: content
+    lang: fr
+  - source: content/ja
+    target: content
+    lang: ja
+  - source: uploads
+    target: content/uploads
+    lang: en
   - source: layouts
     target: layouts
   # Returning partials are core elements which should sit at the root of the project.
@@ -17,4 +29,4 @@ mounts:
 imports:
   - path: github.com/theNewDynamic/huge
   - path: github.com/theNewDynamic/hugo-module-tnd-forms
-  - path: github.com/theNewDynamic/hugo-module-tnd-func
+  #- path: github.com/theNewDynamic/hugo-module-tnd-func

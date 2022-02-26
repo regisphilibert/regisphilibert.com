@@ -16,11 +16,11 @@
 
 {{- $.Scratch.Add "classes" (slice (printf "rp-section-%s" ($.Scratch.Get "section"))) -}}
 
-{{- if .Site.Params.ajax -}}
+{{- if site.Params.ajax -}}
 	{{- $.Scratch.Add "classes" (slice "rp-full-js") -}}
 {{- end -}}
 
-{{- if .Site.Params.prism -}}
+{{- if site.Params.prism -}}
 	{{- $.Scratch.Add "classes" (slice "prism-await") -}}
 {{- end -}}
 {{- if .Data.Singular -}}

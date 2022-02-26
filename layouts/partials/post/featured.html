@@ -1,7 +1,7 @@
 {{ $featured := .Resources.GetMatch "**feature*" }}
 {{ if $featured }}
 	<picture class="rp-project-media-img">
-		{{ range $width, $size := .Site.Params.imagesizes }}
+		{{ range $width, $size := site.Params.imagesizes }}
 			{{ $image := $featured.Resize (printf "%sx" $width)  }}
 			<source srcset='{{ $image.RelPermalink}}' media='(max-width: {{ $width }}px)' />
 		{{ end }}

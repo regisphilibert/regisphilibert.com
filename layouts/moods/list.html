@@ -4,23 +4,22 @@
   </div>
   {{ range partialCached "func/GetYearMoods" "GetYearMoods" }}
     <div class="my-12">
-      <div class="text-2xl font-bold mb-6 border-b border-turquoise pb-2">{{ .name }}</div>
-    <div class="grid grid-cols-7 gap-1">
-      {{ range .days }}
-      <div class="md:h-28 bg-near-white border border-turquoise py-1 md:p-4 text-center text-sm">
-        <div class="md:mb-4 text-turquoise">{{ .day.Format "2" }}</div>
-        {{ with $mood := .mood }}
-          {{ with .Params.emoji }}
-          <div title="{{ $mood.Title }}" class="text-4xl">
-            {{ . }}
-          </div>
-          {{ end }}
+      <div class="rp-Heading">{{ .name }}</div>
+      <div class="grid-square">
+        {{ range .days }}
+        <div class="rp-Mood">
+          <div class="rp-Mood__text">{{ .day.Format "2" }}</div>
+          {{ with $mood := .mood }}
+            {{ with .Params.emoji }}
+            <div title="{{ $mood.Title }}" class="rp-Mood__emoji">
+              {{ . }}
+            </div>
+            {{ end }}
 
-        {{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
       </div>
-    {{ end }}
-    </div>
-    
     </div>
   {{ end }}
 

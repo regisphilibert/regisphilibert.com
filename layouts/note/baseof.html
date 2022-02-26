@@ -12,7 +12,7 @@
 
 	<body class="{{ delimit ($.Scratch.Get "classes") " " }}">
 		<div style="display:block;position:absolute;margin:1.5rem;left:0;top:0;">
-			<a href="{{ .Site.BaseURL }}">🏠</a>
+			<a href="{{ site.BaseURL }}">🏠</a>
 			{{ with .Parent }}
 				{{ if ne .Kind "home" }}
 					<a href="{{ .RelPermalink }}">🗒️</a>

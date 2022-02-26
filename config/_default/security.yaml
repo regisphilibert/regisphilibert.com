@@ -1,0 +1,4 @@
+funcs:
+  getenv:
+  - '^HUGO_'
+  - BRANCH

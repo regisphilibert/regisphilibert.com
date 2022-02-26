@@ -1,5 +1,5 @@
 {{ $currentPage := . }}
-{{ with .Site.Menus.mobile }}
+{{ with site.Menus.mobile }}
 	<nav class="main-nav main-nav--poly main-nav--xs" style="margin-bottom:-20px">
 		{{ range . }}
 			<a href="{{ .URL }}" {{ if $currentPage.IsMenuCurrent "mobile" . }} class="current"{{ end }}
@@ -11,7 +11,7 @@
 		{{ end }}
 	</nav>
 {{ end }}
-{{ with .Site.Menus.desktop }}
+{{ with site.Menus.desktop }}
 	<nav class="main-nav main-nav--poly main-nav--xl">
 		{{ range . }}
 			<p>

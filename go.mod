@@ -3,6 +3,7 @@ module github.com/regisphilibert/regisphilibert.com
 go 1.14
 
 require (
+	github.com/theNewDynamic/huge v0.1.3 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-env v0.0.0-20210512181247-90dd1a287016 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-forms v0.0.0-20210529224822-8d04dbda8558 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-func v0.0.0-20210316194241-a6d99cfae5a6 // indirect

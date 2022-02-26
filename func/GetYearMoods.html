@@ -23,7 +23,7 @@
 {{ $s.Set "data" dict }}
 
 {{ $month_index := 1 }}
-{{ $start := time "2021-01-01" }}
+{{ $start := time (printf "%d-01-01" now.Year)}}
 {{ $day := $start }}
 {{ $days := slice }}
 {{ $month_key := "" }}

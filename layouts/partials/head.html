@@ -24,7 +24,7 @@
       <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ site.Title }}" />
     {{ end }}
     {{ if partialCached "huge/env/IsProduction" "IsProduction" }}
-      {{ partialCached "ga" . }}
+      {{ template "_internal/google_analytics.html" . }}
     {{ end }}
     <link rel="shortcut icon" type="image/png" href="{{ site.BaseURL }}/favicon.png"/>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>

@@ -26,3 +26,4 @@ public
 
 # Local Netlify folder
 .netlify
+bin/hugo_0.97.3

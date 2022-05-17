@@ -3,15 +3,19 @@
 # More info here: https://github.com/theNewDynamic/hugo-module-tnd-forms#create-forms
 id: contact-fr
 # formspree/netlify
-provider: netlify
+provider: formspree
+formspree_id: mjvljleb
 redirect: "/merci/"
 submit: Contactez-moi
 fields:
+- name: name
+  label: Name
+  placeholder: Name
+  required: false
 - template: form-input-default
   type: email
-  label: Courriel
-  name: name
   placeholder: Courriel
+  label: Courriel
   required: true
 - template: form-input-default
   type: textarea

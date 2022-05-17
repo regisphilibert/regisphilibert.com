@@ -11,4 +11,4 @@ menu:
     name: Shall we talk?
 ---
 
-Reach out to me on GitHub or Twitter!
+{{< tnd-form "contact" >}}

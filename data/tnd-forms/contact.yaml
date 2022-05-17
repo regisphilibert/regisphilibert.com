@@ -3,16 +3,19 @@
 # More info here: https://github.com/theNewDynamic/hugo-module-tnd-forms#create-forms
 id: contact
 # formspree/netlify
-provider: netlify
+provider: formspree
+formspree_id: xnqwlwze
 redirect: "/thank-you/"
 submit: Reach me
 fields:
+- name: name
+  label: Name
+  placeholder: Name
+  required: false
 - template: form-input-default
   type: email
-  label: Name
-  name: name
+  label: Email
   placeholder: Email
-  required: true
 - template: form-input-default
   type: textarea
   label: Message

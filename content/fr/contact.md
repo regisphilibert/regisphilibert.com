@@ -11,4 +11,4 @@ menu:
     name: On s'en parle ?
 ---
 
-Contactez moi sur GitHub ou Twitter!
+{{< tnd-form "contact-fr" >}}

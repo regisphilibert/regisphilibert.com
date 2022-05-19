@@ -3,13 +3,12 @@
 # More info here: https://github.com/theNewDynamic/hugo-module-tnd-forms#create-forms
 id: contact-fr
 # formspree/netlify
-provider: formspree
-formspree_id: mjvljleb
+provider: netlify
+# formspree_id: mjvljleb
 redirect: "/fr/merci/"
 submit: Contactez-moi
 recaptcha:
   key: 6LctEP0fAAAAAC7qGzQJHBwJ_SZrny4Eh-5-XkGO
-  version: 2
 fields:
 - name: name
   label: Name

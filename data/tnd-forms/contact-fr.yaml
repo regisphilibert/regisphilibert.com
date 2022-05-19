@@ -5,8 +5,11 @@ id: contact-fr
 # formspree/netlify
 provider: formspree
 formspree_id: mjvljleb
-redirect: "/merci/"
+redirect: "/fr/merci/"
 submit: Contactez-moi
+recaptcha:
+  key: 6LctEP0fAAAAAC7qGzQJHBwJ_SZrny4Eh-5-XkGO
+  version: 2
 fields:
 - name: name
   label: Name

@@ -5,7 +5,7 @@ go 1.14
 require (
 	github.com/theNewDynamic/huge v0.1.3 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-env v0.0.0-20210512181247-90dd1a287016 // indirect
-	github.com/theNewDynamic/hugo-module-tnd-forms v0.0.0-20220518135812-10b354eb209c // indirect
+	github.com/theNewDynamic/hugo-module-tnd-forms v0.0.0-20220519150143-4627e47d693d // indirect
 	github.com/theNewDynamic/hugo-module-tnd-func v0.0.0-20210316194241-a6d99cfae5a6 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-headers v0.1.4 // indirect
 	github.com/theNewDynamic/hugo-module-tnd-icons v0.1.7 // indirect

@@ -7,7 +7,8 @@ provider: formspree
 formspree_id: xnqwlwze
 redirect: "/thank-you/"
 submit: Reach me
-recaptcha: 6LctEP0fAAAAAC7qGzQJHBwJ_SZrny4Eh-5-XkGO
+recaptcha:
+  key: 6LeJE_0fAAAAAN1nmfOFaOkGfPR0hejcovYWaeFZ
 fields:
 - name: name
   label: Name

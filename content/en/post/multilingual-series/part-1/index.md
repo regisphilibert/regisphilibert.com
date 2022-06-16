@@ -33,14 +33,14 @@ So we add the following params to our config file.
 # config.yaml
 languages:
   en:
-	languageName: English
-	weight: 1
+    languageName: English
+    weight: 1
   fr:
-	languageName: Français
-	weight: 2
+    languageName: Français
+    weight: 2
   es:
-	languageName: Spanish
-	weight: 3
+    languageName: Spanish
+    weight: 3
 ```
 
 Now, our languages will be available using `.Site.Languages` and sorted by `Weight`. The lower the… firster. As we'll cover later, it is highly recommanded to make the default language come first.
@@ -50,23 +50,23 @@ Any custom parameter will be used when calling `.Site.Params` or `.Param` in pla
 ```yaml
 # config.yaml
 params:
-	description: Everything you need to know about the three languages.
-	twitter_handle: 3Languages
+  description: Everything you need to know about the three languages.
+  twitter_handle: 3Languages
 
 languages:
   en:
-	languageName: English
-	weight: 1
+    languageName: English
+    weight: 1
   fr:
-	languageName: Français
-	weight: 2
-	description: Tous ce que vous avez toujours voulu savoir sur les trois langues.
-	twitter_handle: 3Languages_france
+    languageName: Français
+    weight: 2
+    description: Tous ce que vous avez toujours voulu savoir sur les trois langues.
+    twitter_handle: 3Languages_france
   es:
-	languageName: Spanish
-	weight: 3
-	description: Todo lo que necesitas saber sobre los tres idiomas.
-	twitter_handle: 3Languages_espana
+    languageName: Spanish
+    weight: 3
+    description: Todo lo que necesitas saber sobre los tres idiomas.
+    twitter_handle: 3Languages_espana
 
 ```
 
@@ -111,17 +111,17 @@ It is also possible to assign a different content directory to each of your lang
 ```yaml
 languages:
   en:
-	languageName: English
-	weight: 1
-	contentDir: content/english
+    languageName: English
+    weight: 1
+    contentDir: content/english
   fr:
-	languageName: Français
-	weight: 2
-	contentDir: content/french
+    languageName: Français
+    weight: 2
+    contentDir: content/french
   es:
-	languageName: Spanish
-	weight: 3
-	contentDir: content/spanish
+    languageName: Spanish
+    weight: 3
+    contentDir: content/spanish
 ```
 
 The parameter takes a relative path to your project, or an absolute path. Using an absolute path means the content directories don’t necessarily need to live inside your project, they can be anywhere on your computer.

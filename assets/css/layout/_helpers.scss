@@ -9,7 +9,7 @@
 <a class"mobile-inline tablet-inline">
 You can see me on both mobile and tablet, but not desktop
 </a>
-We can also use to alter text from one plateform to the other.
+We can also use to alter text from one platform to the other.
 For exemple the menu item PROFESSIONELS is too long for ipad.
 Solution can be to put inside the a tag :
 <span class="mobile-inline desktop-inline">Professionnels</span><span class="tablet-inline">Pros</span>

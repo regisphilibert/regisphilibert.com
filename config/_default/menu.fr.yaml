@@ -1,0 +1,5 @@
+desktop:
+- name: et mon blog anglo.
+  weight: 3
+  pre: Blog
+  url: /blog

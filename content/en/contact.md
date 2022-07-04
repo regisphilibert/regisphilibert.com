@@ -5,10 +5,10 @@ title: Contact
 layout: contact
 menu:
   mobile:
-    weight: 3
+    weight: 5
   desktop:
     weight: 4
-    name: Shall we talk?
+    name: Say hi?
 ---
 
 {{< tnd-form "contact" >}}

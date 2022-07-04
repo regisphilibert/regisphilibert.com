@@ -11,7 +11,7 @@ menu:
     name: À Propos
   desktop: 
     weight: 1
-    name: Bonjour, moi c'est Régis
+    name: Bonjour, moi c'est Régis.
     pre: À Propos
 ---
 

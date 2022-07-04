@@ -1,12 +1,21 @@
 {{ $url := .RelPermalink }}
-{{ $plateform := "" }}
+{{ $platform := "" }}
 {{ with .Params.original }}
   {{ with .url }}
     {{ $url = . }}
   {{ end }}
-  {{ with .plateform }}
-    {{ $plateform = . }}
+  {{ with .platform }}
+    {{ $platform = . }}
   {{ end }}
 {{ end }}
 
-{{ return dict "URL" $url "Plateform" $plateform }}
+{{ with .Params.event }}
+  {{ with .url }}
+    {{ $url = . }}
+  {{ end }}
+  {{ with .platform }}
+    {{ $platform = . }}
+  {{ end }}
+{{ end }}
+
+{{ return dict "URL" $url "Platform" $platform }}

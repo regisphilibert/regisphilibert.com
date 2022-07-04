@@ -14,7 +14,7 @@
 			{{ if ne .Type "note"}}
 				<time datetime="{{ .Date }}">{{ dateFormat "Written on January 2, 2006" .Date }}</time>
 				{{ with .Params.original }}
-					{{ with .plateform }}
+					{{ with .platform }}
 						for {{ . }}
 					{{ end }}
 				{{ end }}

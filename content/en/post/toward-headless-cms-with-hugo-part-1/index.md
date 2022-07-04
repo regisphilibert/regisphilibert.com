@@ -10,7 +10,7 @@ tags:
  - Git
 original: 
   url: https://www.thenewdynamic.com/article/toward-using-a-headless-cms-with-hugo-part-1/
-  plateform: theNewDynamic
+  platform: theNewDynamic
 ---
 
 At The New Dynamic we love Hugo, the framework we use to build many of our websites. Through the years there has been no objective, no client request, no challenge we were not able to meet with this amazing tool. But there is one limitation that can be tedious to circumvent: Hugo cannot build distinct pages from data sources outside of individual files! No section of a site can be safely populated from an external API such as a headless CMS.

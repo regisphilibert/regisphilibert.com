@@ -1,0 +1,26 @@
+<div class="rp-Entry__head">
+	<h1 class="rp-Entry__title">
+		{{ if and (.Scratch.Get "link_in_title") .RelPermalink }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+		{{ else }}
+		{{ .Title }}
+		{{ end}}
+	</h1>
+	{{ with .Params.subtitle }}
+	<h2 class="rp-Entry__subtitle">{{ . }}</h2>
+	{{ end }}
+	<div class="rp-Entry__meta">
+		<div class="rp-Entry__time">
+
+      <time datetime="{{ .Params.release_date }}">{{ dateFormat "January 2, 2006" .Params.release_date }}</time>
+      {{ with .Params.event }}
+          at <a class="bg-yellow-500 underline" href="{{ .url }}">{{ .platform }}</a>
+      {{ end }}
+		</div>
+		<div class="rp-Entry__tags">
+    		{{ range .Params.tags }}
+				<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class='rp-Tag'>{{ . }}</a>
+			{{ end }}
+		</div>
+	</div>
+</div>

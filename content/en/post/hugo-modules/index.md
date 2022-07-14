@@ -10,7 +10,7 @@ tags:
  - Git
 original: 
   url: https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
-  plateform: theNewDynamic
+  platform: theNewDynamic
 ---
 
 Back in July 2019 Hugo 0.56.0 introduced a powerful Module system. Pretty much like any package solution it allowed any Hugo project defined as a Module, be it a full website or a theme or a component to use any files stored on a repository somewhere and mount it as its own. It also enabled any Hugo project to become a full fledge Hugo Modules with its own config and dependencies which any other project could mount.

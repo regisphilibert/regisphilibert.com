@@ -6,7 +6,7 @@ layout: about
 description: I'm a front end dev from Montréal specialized in Hugo and Wordpress! How can I help?
 menu:
   mobile:
-    weight: 2
+    weight: 1
     name: About
   desktop: 
     weight: 1

@@ -8,7 +8,7 @@
 			{{ .Content }}
 		</div>
 		{{ with $moreLink := partialCached "func/GetMoreLink" . . }}
-			{{ with .Plateform }}
+			{{ with .Platform }}
 				{{ partial "more" $moreLink }}
 			{{ end }}
 		{{ end }}

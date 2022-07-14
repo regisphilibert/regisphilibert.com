@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ $pages := .Pages }}
+{{ $paginator := .Paginate ($pages.ByDate.Reverse) }}
+{{ if not .IsHome }}
+	<div class="rp-page-header">
+		<h1>Talk{{if ne .Kind "section" }}#{{ .Title }}{{ if gt .Paginator.PageNumber 1 }}::{{.Paginator.PageNumber}}{{ end }}{{ end }}</h1>
+	</div>
+{{ end }}
+<div class="rp-Loop">
+	{{ range $paginator.Pages }}
+		{{ if .Content }}
+		<article class="rp-Entry rp-Entry--in-loop">
+			<div class="rp-Entry__main">
+				{{ .Scratch.Set "link_in_title" true }}
+				{{ partial "talk/head.html" . }}
+				
+				<div class="rp-Entry__content wysiwyg-content user-content">
+					{{ if .Params.featured }}
+					<div class="rp-Entry__thumbnail {{ with (eq .Params.featured "small") }}rp-Entry__thumbnail--small{{ end }}">
+						{{ partial "post/featured" . }}
+					</div>
+					{{ end }}
+					{{ partial "post/summary" . }}
+				</div>
+			</div>
+		</article>
+		{{ end }}
+	{{ end }}
+</div>
+
+{{ template "_internal/pagination.html" . }}
+{{ end }}

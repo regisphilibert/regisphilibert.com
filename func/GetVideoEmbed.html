@@ -1,0 +1,33 @@
+{{/*
+  GetVideoEmbed
+
+  @author @regisphilibert
+
+  @context Int/String (.)
+
+  @access public
+
+  @return String (SafeHTML)
+
+  @use
+    - func/IsInt
+
+*/}}
+{{ $iframe := "" }}
+{{ with . }}
+  {{ $video_id := string . }}
+
+  {{ $youtube_iframe := `<iframe width="560" height="315" src="https://www.youtube.com/embed/%s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>` }}
+  {{ $vimeo_iframe := `<iframe src="https://player.vimeo.com/video/%s?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>` }}
+  
+  {{ if partialCached "func/IsInt" $video_id $video_id }}
+    {{ $iframe = printf $vimeo_iframe $video_id }}
+  {{ else }}
+    {{ $iframe = printf $youtube_iframe $video_id }}
+  {{ end }}
+{{ end }}
+{{ if eq $ "frontline" }}
+  {{ $iframe = `<iframe id='partnerPlayer' frameborder='0' marginwidth='0' marginheight='0' scrolling='no' width='100%' height='100%' src='https://player.pbs.org/partnerplayer/wAypvGrTgj6DGpxIV_siBQ==/?start=0&end=0&topbar=false&autoplay=false&endscreen=false' allowfullscreen allow="encrypted-media"></iframe>` }}
+  {{ $iframe = `<iframe src="https://player.pbs.org/viralplayer/3063971989/" allowfullscreen allow="encrypted-media" style="position: absolute; top: 0; width: 100%; height: 100%; border: 0;"></iframe>` }}
+{{ end }}
+{{ return ($iframe | safeHTML) }}

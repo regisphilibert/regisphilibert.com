@@ -1,0 +1,16 @@
+{{/*
+  IsInt
+  Check if a given String is represent an integer
+  @author @regisphilibert
+
+  @context String/Int (.)
+
+  @access public
+
+  @return Boolean
+*/}}
+{{ $bool := false }}
+{{ if (findRE `^[-+]?\d*$` .) }}
+  {{ $bool = true }}
+{{ end }}
+{{ return $bool }}

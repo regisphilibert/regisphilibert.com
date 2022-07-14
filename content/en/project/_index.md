@@ -12,10 +12,10 @@ projects:
 menu:
   mobile:
     identifier: portfolio
-    weight: 1
+    weight: 4
     name: Portfolio
   desktop:
     weight: 2
-    name: I code websites
+    name: I code websites,
     pre: Portfolio
 ---

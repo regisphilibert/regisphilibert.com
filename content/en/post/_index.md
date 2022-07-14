@@ -6,8 +6,8 @@ aliases:
  - /post
 menu:
   mobile:
-    weight: 4
+    weight: 2
   desktop:
     weight: 3
-    name: and I blog about it.
+    name: I blog about it,
 ---

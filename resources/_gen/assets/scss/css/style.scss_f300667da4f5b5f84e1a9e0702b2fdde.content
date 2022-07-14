@@ -67,7 +67,7 @@ img {
 <a class"mobile-inline tablet-inline">
 You can see me on both mobile and tablet, but not desktop
 </a>
-We can also use to alter text from one plateform to the other.
+We can also use to alter text from one platform to the other.
 For exemple the menu item PROFESSIONELS is too long for ipad.
 Solution can be to put inside the a tag :
 <span class="mobile-inline desktop-inline">Professionnels</span><span class="tablet-inline">Pros</span>
@@ -840,6 +840,9 @@ Solution can be to put inside the a tag :
     height: 100%;
     z-index: 1; }
 
+.g-recaptcha {
+  margin: 1.6em 0; }
+
 .rp-page-header {
   text-align: center;
   margin-bottom: 0.8em; }
@@ -980,6 +983,8 @@ Solution can be to put inside the a tag :
     color: #44b6ae; }
   .pagination li {
     display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
     vertical-align: middle; }
     .pagination li.active a {
       color: #303030;
@@ -1424,3 +1429,9 @@ pre.language-css .token.variable {
   .rp-Notice--aside .rp-Notice__head {
     color: #ffffff;
     background-color: #565656; }
+
+.rp-video {
+  aspect-ratio: 16 / 9; }
+  .rp-video iframe {
+    width: 100%;
+    height: 100%; }

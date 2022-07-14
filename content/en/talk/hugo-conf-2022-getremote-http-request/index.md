@@ -6,7 +6,7 @@ featured: true
 event: 
   platform: HugoConf 2022
   url: https://hugoconf.io/
-video:
+video: z3C7R_r75JI
 ---
 
 In this talk, we’ll explore resources.GetRemote, the new HTTP request solution for Hugo! We’ll cover basic GET requests and see how to process their response data or handle their errors. Then we’ll experiment with more complex POST and UPDATE requests in the context of managing a search index with MeiliSearch REST API. Finally, we’ll use the Shopify Storefront API as a case study for performing GraphQL requests with Hugo!

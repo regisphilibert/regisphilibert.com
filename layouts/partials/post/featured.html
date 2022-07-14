@@ -1,3 +1,8 @@
+{{ with .Params.video }}
+	<div class="rp-video">
+		{{ partial "func/GetVideoEmbed" . }}
+	</div>
+{{ else }}
 {{ $featured := .Resources.GetMatch "**feature*" }}
 {{ if $featured }}
 	<picture class="rp-project-media-img">
@@ -7,4 +12,5 @@
 		{{ end }}
 		<img src="{{ $featured.RelPermalink }}" alt="" />
 	</picture>
+{{ end }}
 {{ end }}

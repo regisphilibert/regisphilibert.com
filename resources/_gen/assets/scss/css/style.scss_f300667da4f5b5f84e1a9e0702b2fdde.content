@@ -983,6 +983,8 @@ Solution can be to put inside the a tag :
     color: #44b6ae; }
   .pagination li {
     display: inline-block;
+    margin-left: .5rem;
+    margin-right: .5rem;
     vertical-align: middle; }
     .pagination li.active a {
       color: #303030;
@@ -1427,3 +1429,9 @@ pre.language-css .token.variable {
   .rp-Notice--aside .rp-Notice__head {
     color: #ffffff;
     background-color: #565656; }
+
+.rp-video {
+  aspect-ratio: 16 / 9; }
+  .rp-video iframe {
+    width: 100%;
+    height: 100%; }

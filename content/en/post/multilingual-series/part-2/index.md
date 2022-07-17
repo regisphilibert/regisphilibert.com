@@ -282,5 +282,5 @@ In this series we found out that be it for editors to translate page content or 
 
 Now if you have built complex Multilingual projects with languages more exotic than the one used in this series, or if you think this piece misses some crucial information, or if you were able to fact-check the number of mice in Cinderella[^2], please drop a note in the comments!
 
-[^1]: http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html
+[^1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [^2]: Of course I made that up!

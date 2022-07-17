@@ -113,7 +113,7 @@ It has been designed to help themes and projects easily build a __« See also 
 You can set several factors or indices with their own level of importance. 
 Tags, publishing month, authors, can help build your related content list.
 
-Hands down, it is the best tool to grab pages related to a given one using your very own recipe, and if you don't already use it to build your _Related Posts_ or _Related Products_ widgets, you should really check its [doc]((https://gohugo.io/content-management/related/)) and play with it. It's rad!
+Hands down, it is the best tool to grab pages related to a given one using your very own recipe, and if you don't already use it to build your _Related Posts_ or _Related Products_ widgets, you should really check its [doc](https://gohugo.io/content-management/related/) and play with it. It's rad!
 
 In our case though, we don't need a _Related Novels_ module, we need a robust, consistent and build time friendly relationship. And as it turns out, Related Content offers just that!
 

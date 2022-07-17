@@ -5,7 +5,6 @@ title: Regis Philibert
 baseURL: https://www.regisphilibert.com
 DefaultContentLanguage: en
 enableRobotsTXT: true
-disableAliases: true
 disqusShortname: regisphilibert
 googleAnalytics: UA-24416415-1
 # If project needs to build future: 

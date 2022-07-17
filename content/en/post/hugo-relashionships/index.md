@@ -3,7 +3,9 @@ title: "Better Relationships in Hugo"
 date: 2018-04-03T16:58:31-04:00
 draft: false
 subtitle: with Hugo's Related Content
-slug: hugo-optmized-relashionships-with-related-content
+slug: hugo-optmized-relationships-with-related-content
+aliases:
+- hugo-optmized-relashionships-with-related-content
 description: By using Hugo's Related Content to manage your relationships, you could reduce your build time by 70%! In this article, we see how easy it is to implement Hugo's new Related Content feature on an existing project and how it will forever optimize the way we manage relationships in Hugo.
 toc: true
 twitter_card: summary_large_image

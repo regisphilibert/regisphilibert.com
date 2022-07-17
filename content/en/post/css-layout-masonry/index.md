@@ -52,7 +52,7 @@ __With those 3 requirements in mind, let’s see our modern options.__
 **CSS Grid** is the best thing that happened to CSS since __box-sizing: border-box;__
 You can control the order, you can set the width and/or height of the gutter, heck you can even define the space an element will take on the grid: spans 2 columns, span 3 rows. There are tons of tutorials out there including the amazing [Rachel Andrew](https://twitter.com/rachelandrew)'s [Grid by Exemple](https://gridbyexample.com/).
 
-This modest <a class="no-ajax" target="_blank" href='{{< fakeref "about" >}}#skill-grid'>skill grid</a> by yours truly has been coded in minutes and adapts beautifuly.
+This modest <a class="no-ajax" target="_blank" href='{{< relref "about" >}}#skill-grid'>skill grid</a> by yours truly has been coded in minutes and adapts beautifuly.
 
 It looks like CSS Grid gives us even more options than we initially required 🤘!
 

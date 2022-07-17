@@ -32,6 +32,6 @@ menu:
 
 <span class="black-color">[__GitHub__](https://github.com/regisphilibert "ギットハブ")</span> と <span class="twitter-color">[🐦__Twitter__](https://twitter.com/regisphilibert "ツイッター")</span> と <span class="black-color">[__LinkedIn__🚾](https://www.linkedin.com/in/regisphilibert "リンクトイン")</span>です。
 
-英語のスキルチャートは[こちら]({{< fakeref path="/about.md#skill-grid" lang="en" >}})。
+英語のスキルチャートは[こちら]({{< relref path="/about.md#skill-grid" lang="en" >}})。
 
 [^1]: 勿論、このウェブサイトは[Hugo](http://gohugo.io/)で作りました。

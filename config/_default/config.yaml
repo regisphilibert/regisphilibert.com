@@ -6,7 +6,7 @@ baseURL: https://www.regisphilibert.com
 DefaultContentLanguage: en
 enableRobotsTXT: true
 disqusShortname: regisphilibert
-googleAnalytics: G-312863772
+googleAnalytics: G-0CVLY15R8Y
 # If project needs to build future: 
 # buildFuture: true
 
@@ -18,7 +18,7 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
-
+re
 outputFormats:
   markdown:
     baseName: markdown

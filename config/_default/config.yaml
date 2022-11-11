@@ -6,7 +6,7 @@ baseURL: https://www.regisphilibert.com
 DefaultContentLanguage: en
 enableRobotsTXT: true
 disqusShortname: regisphilibert
-googleAnalytics: UA-24416415-1
+googleAnalytics: 312863772
 # If project needs to build future: 
 # buildFuture: true
 

@@ -3,15 +3,11 @@
 		<div class="rp-Entry__main">
 			<div class="rp-Entry__head">
 				<h1 class="rp-contact__title" data-success-message='{{ i18n "contact_thanks" }} (๑˃̵ᴗ˂̵)و'>{{ .Title }}</h1>
-	            <div class="rp-Socials">
-	            	{{ with site.Data.socials }}
-		            	{{ range . }}
-		            		{{ partial "social" . }}
-		            	{{end}}
-		            {{ else }}
-		            	{{ partial "socials_hard" }}
-	            	{{ end }}
-	            </div>
+				<div class="rp-Socials">
+					{{ range partial "tnd-socials/GetSocials" $ }}
+							{{ partial "social" . }}
+					{{ end }}
+				</div>
 			</div>
 
 			<a class="rp-button" style="display:block;text-align:center" href="mailto:bonjour@regisphilibert.com?subject=From regisphilibert.com: ">bonjour@regisphilibert.com</a>

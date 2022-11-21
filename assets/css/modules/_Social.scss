@@ -1,3 +1,6 @@
+.rp-Socials{
+	display: flex;
+}
 .rp-Social{
 	display: inline-block;
 	margin: 0 0.2em;
@@ -8,11 +11,19 @@
 			color:$cYellow;
 		}
 	}
+	svg{
+		width: 1em;
+		height: 1em;
+	}
 }
 .rp-section-contact .rp-header .rp-Socials{
 	display: none;
 }
 @media (min-width:$xl){
+	.rp-Socials{
+		align-items: center;
+		justify-content: end;
+	}
 	.rp-page-header, .rp-Entry__head{
 		.rp-Social{
 			font-size:2.3em;
@@ -31,6 +42,11 @@
 }
 
 @media (max-width:$xl - 1){
+	.rp-page-header, .rp-Entry__head{
+		.rp-Socials{
+			justify-content: center;
+		}
+	}
 	.rp-header{
 		position: relative;
 		.rp-Socials{

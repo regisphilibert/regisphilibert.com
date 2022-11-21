@@ -112,9 +112,18 @@ tnd_media:
 # ###############
 tnd_socials:
   services:
+  - name: github
+    handle: regisphilibert
+    url: https://github.com/regisphilibert
   - name: twitter
-    handle: theNewDynamic
-
+    handle: regisphilibert
+  - name: mastodon
+    handle: regisphilibert
+    icon: mastodon
+    url: https://indieweb.social/@regisphilibert
+  - name: linkedin
+    handle: regisphilibert
+    url: https://www.linkedin.com/in/regisphilibert
 # ###############
 # TND FORMS
 # ###############

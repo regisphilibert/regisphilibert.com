@@ -1115,6 +1115,9 @@ Solution can be to put inside the a tag :
   .rp-Switch {
     font-size: 0.8em; } }
 
+.rp-Socials {
+  display: flex; }
+
 .rp-Social {
   display: inline-block;
   margin: 0 0.2em;
@@ -1123,11 +1126,17 @@ Solution can be to put inside the a tag :
     transition: 150ms; }
     .rp-Social a:hover {
       color: #e6d223; }
+  .rp-Social svg {
+    width: 1em;
+    height: 1em; }
 
 .rp-section-contact .rp-header .rp-Socials {
   display: none; }
 
 @media (min-width: 1170px) {
+  .rp-Socials {
+    align-items: center;
+    justify-content: end; }
   .rp-page-header .rp-Social, .rp-Entry__head .rp-Social {
     font-size: 2.3em; }
   .rp-Social:last-child {
@@ -1136,6 +1145,8 @@ Solution can be to put inside the a tag :
     margin-top: 1em; } }
 
 @media (max-width: 1169px) {
+  .rp-page-header .rp-Socials, .rp-Entry__head .rp-Socials {
+    justify-content: center; }
   .rp-header {
     position: relative; }
     .rp-header .rp-Socials {

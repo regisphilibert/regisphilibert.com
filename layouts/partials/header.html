@@ -11,13 +11,11 @@
 
         </a>
         {{ partial "nav" . }}
-        {{ with site.Data.socials }}
-            <div class="rp-Socials">
-                {{ range first 2 . }}
-                {{ partialCached "social" . .Name }}
-                {{ end }}
-            </div>
-        {{ end }}
+        <div class="rp-Socials">
+            {{ range partial "tnd-socials/GetSocials" $ }}
+                {{ partial "social" . }}
+            {{ end }}
+        </div>
     </div>
     {{ partialCached "mood" "mood" }}
 </header>

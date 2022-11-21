@@ -29,4 +29,5 @@ mounts:
 imports:
   - path: github.com/theNewDynamic/huge
   - path: github.com/theNewDynamic/hugo-module-tnd-forms
+  - path: github.com/theNewDynamic/hugo-module-tnd-socials
   #- path: github.com/theNewDynamic/hugo-module-tnd-func

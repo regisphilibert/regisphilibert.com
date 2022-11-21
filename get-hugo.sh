@@ -46,7 +46,7 @@ pushd ${PWD}/temp
 
 echo Current Directory: ${PWD}
 
-curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${EXTENDED}${HUGO_VERSION}_macOS-64bit.tar.gz -o ${FILE}.tar.gz
+curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${EXTENDED}${HUGO_VERSION}_darwin-universal.tar.gz -o ${FILE}.tar.gz
 
 TARBALL=${FILE}.tar.gz
 

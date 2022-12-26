@@ -43,9 +43,13 @@ languages:
     weight: 3
 ```
 
-Now, our languages will be available using `.Site.Languages` and sorted by `Weight`. The lower the… firster. As we'll cover later, it is highly recommanded to make the default language come first.
+Now, our languages will be available using `site.Languages` and sorted by `Weight`. The lower the… firster. As we'll cover later, it is highly recommanded to make the default language come first.
 
-Any custom parameter will be used when calling `.Site.Params` or `.Param` in place of the default site parameter. Se we never have to worry about which parameter to call!
+Any custom parameter will be used when calling `site.Params` or `.Param` in place of the default site parameter. Se we never have to worry about which parameter to call!
+
+{{< notice >}}
+Contrary to `.Site` which is a Page's method, `site` is a global function which does not need a page...
+{{< /notice >}}
 
 ```yaml
 # config.yaml
@@ -88,7 +92,7 @@ We’ll take a deeper look at how each ways ensure two things :
 ### Managing translations by Filename 📄
 Let’s take a look at our about page, and its translations.
 
-```
+```text
 content
 	├── about.md
 	├── about.es.md
@@ -106,9 +110,14 @@ DefaultContentLanguage: es
 ```
 
 ### Managing translations by Directory 📁
-It is also possible to assign a different content directory to each of your languages. In order to use this system we would have to include a `contentDir` parameter to our languages configuration.
+It is also possible to assign a different content directory to each of your languages. There is two ways to proceed and we detail them below.
+
+#### with `contentDir`
+
+For most of the projects, we can simply include a `contentDir` parameter to our languages configuration 
 
 ```yaml
+# config.yaml
 languages:
   en:
     languageName: English
@@ -124,10 +133,33 @@ languages:
     contentDir: content/spanish
 ```
 
-The parameter takes a relative path to your project, or an absolute path. Using an absolute path means the content directories don’t necessarily need to live inside your project, they can be anywhere on your computer.
+#### With Hugo Module Mounts
 
-Going back to our about pages, this is how our content directories would look like:
+For projects which __are__ using Hugo Modules and [mounts](https://gohugo.io/hugo-modules/configuration/#module-config-mounts) on the content files. The directory configuration will happen as a module mounts like so:
+
+```yaml
+# config.yaml
+module:
+  mounts: 
+    - source: content/english
+      target: content
+      lang: en
+    - source: content/french
+      target: content
+      lang: fr
+    - source: content/spanish
+      target: content
+      lang: es
+    # Whatever other mount settings you initially had.
+    - source: dist/documentation
+      target: content
+      lang: en
 ```
+Note the critical mount's `lang` parameter which must point to the language key as declared in the  `languages` config.
+
+Good! Either using `contentDir` or module mounts, our about pages content files should be structured like this:
+
+```text
 content
     ├── english
     │   └── about.md
@@ -138,6 +170,10 @@ content
 ```
 
 Now, Hugo will assign a language to each of the about pages by looking at which directory they live in.
+
+{{< notice >}}
+For each solution, the `source` or `contentDir` parameter takes a relative path to your project, or an absolute path. Using an absolute path means the content directories don’t necessarily need to live inside your project, they can be anywhere on your computer.
+{{< /notice >}}
 
 ## Linking our pages 🔗
 
@@ -261,7 +297,7 @@ Not only does Hugo make it possible to share resources among translations, it al
 
 Let’s go back to our about pages and turn them into Bundles. For clarity we’ll use the "_By Directory_" management system.
 
-```
+```text
 content
     ├── english
     │   └── about
@@ -286,7 +322,7 @@ How to add a dedicated `header.jpg` for the Spanish page?
   
 By doing exactly that!
 
-```
+```text
 content
   ├── english
   │   └── about
@@ -309,7 +345,7 @@ There is no `header.jpg` in that bundle, so which header will be returned for th
 Well here, Hugo will look at the languages respective `Weight` and return the winners’s file. If we look at our initial configuration file, the French should get the English header.
 
 You should know that any file, content or not, can be renamed to match a language. For this Page Bundle localization, we chose to manage our translations by __directory__ but had we chosen to manage them by __filename__, this is how our About page's Bundle would have looked like:
-```
+```text
 content
 	└── about
 		├── index.md
@@ -330,7 +366,7 @@ Contrary to pages resources, Data Files are not language aware. You must therefo
 
 Consider the following structure for your data directories where `en` and `fr` are your website's languages' respective codes.
 
-```
+```text
 data
   ├── en
   │   └── team.yaml
@@ -341,13 +377,13 @@ data
 Now from your template:
 
 ```go-html-template
-{{ $data := index .Site.Data .Site.Language.Lang }}
+{{ $data := index site.Data site.Language.Lang }}
 {{ range $data.team }}
   <a href="{{ .url }}">{{ .name }}</a>
 {{ end }}
 ```
 
-We use the [index](https://gohugo.io/functions/index-function/#readout) function to find the directory in `.Site.Data` which corresponds to the current language's code. Then we can use `$data` wherever needed in the template file.
+We use the [index](https://gohugo.io/functions/index-function/#readout) function to find the directory in `site.Data` which corresponds to the current language's code. Then we can use `$data` wherever needed in the template file.
 
 {{< notice type="warning">}} You should really improve the above with the usual precautions and fallbacks (`with`, `if` etc...) {{</ notice >}}
 

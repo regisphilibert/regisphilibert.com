@@ -124,7 +124,7 @@ from
 ~~~
 to
 ~~~go
-{{ if or (eq $firstname 'George') (eq $firstname 'Daniel') }}
+{{ if or (eq $firstname "George") (eq $firstname "Daniel") }}
 ~~~
 
 #### AND

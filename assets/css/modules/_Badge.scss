@@ -15,6 +15,10 @@
 	position: relative;
 	background-color:$cYellow;
 	border-radius:5px;
+	border: 3px solid $cYellow;
+	&:hover{
+		border: 3px solid $cOrange;
+	}
 	.rp-Badge__body{
 		padding:0 1em 1em 1em;
 		overflow: scroll;
@@ -33,7 +37,7 @@
 			letter-spacing: -3px;
 			font-size: 0.5em;
 		}
-		
+
 	}
 	&:after{
 		display: none;

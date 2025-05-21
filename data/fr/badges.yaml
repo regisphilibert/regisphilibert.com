@@ -1,26 +1,34 @@
+- Name: Astro
+  Icon: astro
+  SVG: true
+  Big: true
+  Text: Le meilleure generateur de sites statiques ! 🚀. Je travaille avec tous les jours et je me régale avec les nouvelles fonctionnalités ajoutées régulièrement par [l’équipe coeur](https://github.com/withastro/astro) ! [Allez voir ça !](https://astro.build/) !
+
+- Name: Sanity
+  Icon: sanity
+  SVG: true
+  Big: true
+  Text: |-
+    C’est le meilleur CMS avec lequel j’ai jamais travaillé. Leur [framework et content lake](https://www.sanity.io/) posent les bases d’une expérience entièrement basée sur la configuration, mais je ne peux pas m’empêcher de personnaliser cette application web à fond pour mes clients ! Je suis aussi amoureux de [GROQ](https://www.sanity.io/docs/content-lake/how-queries-work), leur propre langage de requête !
+
 - Name: Hugo
   Icon: hugo
-  Big: true
   SVG: true
-  Text: Le meilleur générateur de site static 🚀. Je code mes sites web avec, [j'écris dessus](https://regisphilibert.com/tags/hugo/), et je chéris les projets montés avec! Go [Hugo](https://gohugo.io/)!
+  Big: false
+  Text: Cela a été mon premier générateur de site statique pendant longtemps ! Mon premier amour, je ne t’oublierai jamais Hugo ! Ce site est toujours codé avec Hugo, j’en [ai longuement parlé](https://regisphilibert.com/tags/hugo/) et je suis toujours enthousiaste à l’idée de travailler avec ! Go [Hugo](https://gohugo.io/) !
 
 - Name: JAMStack
   Big: true
   Text: |
     Le [JAMStack](https://jamstack.org/best-practices/), c'est le futur du web.
-    C'est un server sans FTP, c'est du data sans phpMyAdmin, c'est la vie sans cPanel... 
-    
+    C'est un server sans FTP, c'est du data sans phpMyAdmin, c'est la vie sans cPanel...
+
     C'est là où le web et moi on se rend, mais montez, y a de la place pour tout le monde!
 
 - Icon: wordpress
-  Big: true
+  Big: false
   Name: Wordpress
   Text: C'est mon CMS de choix. Il a le back office parfait, et avec une bonne API Rest, on a même pas besoin de son front.
-
-- Name: Gatsby
-  Text: Mon second choix pour construire des sites statics. S'intègre parfaitement à un projet React! 
-  Icon: gatsby
-  SVG: true
 
 - Name: Netlify
   Icon: netlify

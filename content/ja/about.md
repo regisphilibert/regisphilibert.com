@@ -7,7 +7,7 @@ menu:
   mobile:
     weight: 2
     name: ついて
-  desktop: 
+  desktop:
     weight: 1
     name: レジスです。
     pre: ついて
@@ -31,7 +31,7 @@ menu:
 
 大きいほの作品は[ここに]({{< ref "/" >}})あります。
 
-<span class="black-color">[__GitHub__](https://github.com/regisphilibert "ギットハブ")</span> と <span class="twitter-color">[🐦__Twitter__](https://twitter.com/regisphilibert "ツイッター")</span> と <span class="black-color">[__LinkedIn__🚾](https://www.linkedin.com/in/regisphilibert "リンクトイン")</span>です。
+<span class="black-color">[__GitHub__](https://github.com/regisphilibert "ギットハブ")</span> と <span class="twitter-color">[🦋BlueSky](https://bsky.app/profile/regisphilibert.com "ツイッター")</span> と <span class="black-color">[LinkedIn🚾](https://www.linkedin.com/in/regisphilibert "リンクトイン")</span>です。
 
 英語のスキルチャートは[こちら]({{< relref path="/about.md#skill-grid" lang="en" >}})。
 

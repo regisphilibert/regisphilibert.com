@@ -8,7 +8,7 @@ menu:
   mobile:
     weight: 1
     name: About
-  desktop: 
+  desktop:
     weight: 1
     name: Hi, I'm Régis
     pre: About
@@ -24,7 +24,7 @@ I am __front end__ first and foremost, the view is what I love best. That being 
 
 My most outstanding works are listed [here](/).
 
-I'm on <span class="black-color font-semibold">[GitHub](https://github.com/regisphilibert)</span>, <span class="twitter-color font-semibold">[🐦Twitter](https://twitter.com/regisphilibert)</span> and <span class="black-color font-semibold">[LinkedIn🚾](https://www.linkedin.com/in/regisphilibert)</span>[^2].
+I'm on <span class="black-color font-semibold">[GitHub](https://github.com/regisphilibert)</span>, <span class="twitter-color font-semibold">[🦋BlueSky](https://bsky.app/profile/regisphilibert.com)</span> and <span class="black-color font-semibold">[LinkedIn🚾](https://www.linkedin.com/in/regisphilibert)</span>[^2].
 
 Oh and there's a skill grid down [there ⏬](#skill-grid).
 

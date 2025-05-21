@@ -115,12 +115,8 @@ tnd_socials:
   - name: github
     handle: regisphilibert
     url: https://github.com/regisphilibert
-  - name: twitter
-    handle: regisphilibert
-  - name: mastodon
-    handle: regisphilibert
-    icon: mastodon
-    url: https://indieweb.social/@regisphilibert
+  - name: bluesky
+    handle: https://bsky.app/profile/regisphilibert.com
   - name: linkedin
     handle: regisphilibert
     url: https://www.linkedin.com/in/regisphilibert

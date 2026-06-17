@@ -1,0 +1,5 @@
+{{- with .Get 0 -}}
+  {{- with site.GetPage . -}}
+<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{- end -}}
+{{- end -}}

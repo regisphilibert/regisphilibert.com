@@ -151,13 +151,6 @@ hugo mod get github.com/twbs/icons@2396edfbfeda7a3f9c5d98f67e3540f593b28e1e
 You should commit your `go.mod` and `go.sum` file of course, so that everybody working on the project uses the same versions!
 {{% /notice %}}
 
-{{% aside %}}
-#### Module Local Development
-This article does not cover local development of a module, but we have a note that does! And you should definitely go and give it a thorough read before starting your real Hugo Module journey.
-
-👉&nbsp;[Develop Hugo Module Locally]({{< relref "/note/develop-hugo-modules-locally" >}})
-{{% /aside %}}
-
 
 ## Create a Hugo Module
 
@@ -350,8 +343,4 @@ This will clean up the `go.sum` file we won't discuss here.
 
 Hugo Module solution is the best way to import any public repo's files into your Hugo Projects and manage their versioning. And after seeing how easy it is to build one, it should really become your go-to way to manage reusuable solutions and distritube them throughout the Hugo ecosystem.
 
-During the coming weeks we'll blog a lot about the whys-and-hows of the many [open source Hugo Modules]({{< relref "/open-source" >}}) we built. But you can already check their code now for some complex, practical and usually well commented examples of Hugo Modules implementations.
-
-Also, if you're down for building some powerful Hugo Modules, you should definitely read our note on [Developing Hugo Modules Locally]({{< relref "/note/develop-hugo-modules-locally" >}}).
-
-Oh and here's the finished example repo we built in this article is available [here](https://github.com/regisphilibert/hugo-module-icons).
+Here's the finished example repo we built in this article is available [here](https://github.com/regisphilibert/hugo-module-icons).

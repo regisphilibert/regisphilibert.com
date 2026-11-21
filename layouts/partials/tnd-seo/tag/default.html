@@ -1,0 +1,8 @@
+{{/* Overrides hugo-module-tnd-seo's tag/default which prints canonical as
+  <meta name="canonical">, a tag search engines ignore.
+  Canonical must be <link rel="canonical" href="..."> */}}
+{{ $tag := dict "name" "meta" "attr" (dict "name" .key "content" .value) }}
+{{ if eq .key "canonical" }}
+  {{ $tag = dict "name" "link" "attr" (dict "rel" "canonical" "href" .value) }}
+{{ end }}
+{{ return $tag }}

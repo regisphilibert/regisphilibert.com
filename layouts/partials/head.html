@@ -26,7 +26,7 @@
     {{ if partialCached "huge/env/IsProduction" "IsProduction" }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
-    <link rel="shortcut icon" type="image/png" href="{{ site.BaseURL }}/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="{{ "uploads/favicon.png" | absURL }}"/>
     <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
     <script>

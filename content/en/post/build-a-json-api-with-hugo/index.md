@@ -2,13 +2,14 @@
 title: "Build a JSON API With Hugo's Custom Output Formats"
 date: 2018-04-13T08:32:27.000Z
 disable_comments: true
+draft: true
 _build:
   render: never
 tags:
  - Hugo
  - API
  - Output Formats
-original: 
+original:
   url: https://forestry.io/blog/build-a-json-api-with-hugo/
   platform: forestry.io
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects"
 date: 2018-05-25T08:32:27.000Z
+draft: true
 disable_comments: true
 _build:
   render: never
@@ -8,7 +9,7 @@ tags:
  - Hugo
  - API
  - Output Formats
-original: 
+original:
   url: https://forestry.io/blog/hugo-json-api-part-2/
   platform: forestry.io
 ---
